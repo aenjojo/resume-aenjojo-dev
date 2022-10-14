@@ -1,6 +1,6 @@
 {
   "name": "aenjojo-dev",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -18,15 +18,13 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
     "remark": "^14.0.2",
-    "remark-html": "^15.0.1",
-    "theme-change": "^2.2.0"
+    "remark-html": "^15.0.1"
   },
   "devDependencies": {
     "@types/node": "18.7.16",
     "@types/react": "18.0.18",
     "@types/react-dom": "18.0.6",
     "autoprefixer": "^10.4.8",
-    "daisyui": "^2.25.0",
     "eslint": "8.23.0",
     "eslint-config-next": "12.2.5",
     "postcss": "^8.4.16",

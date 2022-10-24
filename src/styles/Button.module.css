@@ -1,64 +1,66 @@
 .button {
-    @apply inline-flex flex-nowrap gap-1 p-2 m-0.5 rounded-lg font-medium
+	@apply
+		inline-flex flex-nowrap gap-1 p-2 m-0.5
+		rounded-lg font-medium transition-all duration-200 cursor-pointer
 }
 
 :is(.fill, .outline, .empty) {
-    @apply border
+	@apply border
 }
 :is(.fill, .outline, .empty):focus {
-    @apply outline-2 outline-offset-4
+	@apply outline-2 outline-offset-4
 }
 .primary:is(.fill, .outline, .empty):focus {
-    @apply outline-blue-500
+	@apply outline-blue-500
 }
 .secondary:is(.fill, .outline, .empty):focus {
-    @apply outline-pink-500
+	@apply outline-pink-500
 }
 
 .fill.primary {
-    @apply
-        bg-blue-700 text-blue-50 border-blue-700
-        hover:bg-blue-800 hover:border-blue-800
-        focus:bg-blue-800 focus:border-blue-800
-        active:bg-blue-900 active:border-blue-900
+	@apply
+		bg-blue-700 text-blue-50 border-blue-700
+		hover:bg-blue-800 hover:border-blue-800
+		focus:bg-blue-800 focus:border-blue-800
+		active:bg-blue-900 active:border-blue-900
 }
 
 .fill.secondary {
-    @apply
-        bg-pink-700 text-pink-50 border-pink-700
-        hover:bg-pink-800 hover:border-pink-800
-        focus:bg-pink-800 focus:border-pink-800
-        active:bg-pink-900 active:border-pink-900
+	@apply
+		bg-pink-700 text-pink-50 border-pink-700
+		hover:bg-pink-800 hover:border-pink-800
+		focus:bg-pink-800 focus:border-pink-800
+		active:bg-pink-900 active:border-pink-900
 }
 
 .outline.primary {
-    @apply 
-        bg-transparent text-blue-700 border-blue-700
-        hover:bg-blue-200 hover:text-blue-800 hover:border-blue-800
-        focus:bg-blue-200 focus:text-blue-800 focus:border-blue-800
-        active:bg-blue-300 active:text-blue-900 active:border-blue-900
+	@apply 
+		bg-transparent text-blue-700 border-blue-700
+		hover:bg-blue-200 hover:text-blue-800 hover:border-blue-800
+		focus:bg-blue-200 focus:text-blue-800 focus:border-blue-800
+		active:bg-blue-300 active:text-blue-900 active:border-blue-900
 }
 
 .outline.secondary {
-    @apply
-        bg-transparent text-pink-700 border-pink-700
-        hover:bg-pink-200 hover:text-pink-800 hover:border-pink-800
-        focus:bg-pink-200 focus:text-pink-800 focus:border-pink-800
-        active:bg-pink-300 active:text-pink-900 active:border-pink-900
+	@apply
+		bg-transparent text-pink-700 border-pink-700
+		hover:bg-pink-200 hover:text-pink-800 hover:border-pink-800
+		focus:bg-pink-200 focus:text-pink-800 focus:border-pink-800
+		active:bg-pink-300 active:text-pink-900 active:border-pink-900
 }
 
 .empty.primary {
-    @apply
-        bg-transparent text-blue-700 border-transparent
-        hover:bg-blue-200 hover:text-blue-800
-        focus:bg-blue-200 focus:text-blue-800
-        active:bg-blue-300 active:text-blue-900
+	@apply
+		bg-transparent text-blue-700 border-transparent
+		hover:bg-blue-200 hover:text-blue-800
+		focus:bg-blue-200 focus:text-blue-800
+		active:bg-blue-300 active:text-blue-900
 }
 
 .empty.secondary {
-    @apply
-        bg-transparent text-pink-700 border-transparent
-        hover:bg-pink-200 hover:text-pink-800
-        focus:bg-blue-200 focus:text-pink-800
-        active:bg-blue-300 active:text-pink-900
+	@apply
+		bg-transparent text-pink-700 border-transparent
+		hover:bg-pink-200 hover:text-pink-800
+		focus:bg-blue-200 focus:text-pink-800
+		active:bg-blue-300 active:text-pink-900
 }

@@ -1,0 +1,7 @@
+.link {
+    @apply
+        inline-flex flex-nowrap
+        transition-all duration-200 cursor-pointer
+        text-blue-700 underline-offset-2
+        hover:underline hover:bg-blue-100
+}

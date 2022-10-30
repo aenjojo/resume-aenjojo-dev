@@ -1,12 +1,12 @@
 import Link from 'next/link';
-import type { ReactElement } from 'react';
+import type { ReactNode } from 'react';
 import { MdOpenInNew } from 'react-icons/md';
 
 export interface BaseLinkPropsType {
 	href: string | URL,
 	value: string,
-	iconLeft?: ReactElement,
-	iconRight?: ReactElement,
+	iconLeft?: ReactNode,
+	iconRight?: ReactNode,
 	isNewTab?: boolean,
 	className?: string,
 };

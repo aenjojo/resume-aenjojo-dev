@@ -1,8 +1,8 @@
-import type { ReactElement } from 'react';
+import type { ReactNode } from 'react';
 import clsx from 'clsx';
 
 export interface GenericTitlePropsType {
-	children: string | ReactElement | ReactElement[],
+	children: string | ReactNode | ReactNode[],
 };
 
 export default function GenericTitle({ children }: GenericTitlePropsType) {

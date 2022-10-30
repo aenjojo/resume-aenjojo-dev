@@ -1,11 +1,11 @@
-import type { ReactElement } from 'react';
+import type { ReactNode } from 'react';
 import clsx from 'clsx';
 import styles from '#styles/Button.module.css';
 
 interface ButtonPropsType {
 	value: string,
-	iconLeft?: ReactElement,
-	iconRight?: ReactElement,
+	iconLeft?: ReactNode,
+	iconRight?: ReactNode,
 	type: 'fill' | 'outline' | 'empty',
 	color: 'primary' | 'secondary',
 };

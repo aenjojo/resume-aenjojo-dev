@@ -7,7 +7,7 @@ export default function SubSectionTitle({ children }: SubSectionTitlePropsType) 
 	const SubSectionTitleStyle = clsx([
 		'text-xl font-semibold',
 		'mx-2 my-1 p-1',
-		'text-slate-900',
+		'text-base-900',
 	]);
 
 	return (

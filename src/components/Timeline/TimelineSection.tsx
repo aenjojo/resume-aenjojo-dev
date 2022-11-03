@@ -7,7 +7,7 @@ interface TimelineSectionPropsType {
 export default function TimelineSection({ children }: TimelineSectionPropsType) {
 	return (
 		<section
-			className='border-l-4 border-l-blue-500 before:w-2 before:h-2 before:rotate-45 before:absolute before:bg-blue-800 before:-translate-x-1.5 before:translate-y-4'
+			className='border-l-4 border-l-primary-500 before:w-2 before:h-2 before:rotate-45 before:absolute before:bg-primary-800 before:-translate-x-1.5 before:translate-y-4'
 		>
 			{children}
 		</section>

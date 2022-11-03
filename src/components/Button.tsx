@@ -6,16 +6,16 @@ interface ButtonPropsType {
 	value: string,
 	iconLeft?: ReactNode,
 	iconRight?: ReactNode,
-	type: 'fill' | 'outline' | 'empty',
+	variant: 'fill' | 'outline' | 'empty',
 	color: 'primary' | 'secondary',
 };
 
-export default function Button({ value, iconLeft, iconRight, type, color }: ButtonPropsType) {
+export default function Button({ value, iconLeft, iconRight, variant, color }: ButtonPropsType) {
 	const LinkButtonStyle = clsx([
 		styles.button,
-		type === 'fill' && styles.fill,
-		type === 'outline' && styles.outline,
-		type === 'empty' && styles.empty,
+		variant === 'fill' && styles.fill,
+		variant === 'outline' && styles.outline,
+		variant === 'empty' && styles.empty,
 		color === 'primary' && styles.primary,
 		color === 'secondary' && styles.secondary,
 	]);

@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import clsx from 'clsx';
 
 export interface GenericTitlePropsType {
-	children: string | ReactNode | ReactNode[],
+	children: ReactNode | ReactNode[],
 };
 
 export default function GenericTitle({ children }: GenericTitlePropsType) {

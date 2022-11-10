@@ -1,19 +1,16 @@
 .button {
 	@apply
 		inline-flex flex-nowrap gap-1 p-2 m-0.5
-		rounded-lg font-medium transition-all duration-200 cursor-pointer
+		rounded-lg font-medium transition-all duration-200 cursor-pointer border
 }
-
-:is(.fill, .outline, .empty) {
-	@apply border
-}
-:is(.fill, .outline, .empty):focus {
+.button:focus {
 	@apply outline-2 outline-offset-4
 }
-.primary:is(.fill, .outline, .empty):focus {
+
+.primary:focus {
 	@apply outline-primary-300
 }
-.secondary:is(.fill, .outline, .empty):focus {
+.secondary:focus {
 	@apply outline-secondary-300
 }
 

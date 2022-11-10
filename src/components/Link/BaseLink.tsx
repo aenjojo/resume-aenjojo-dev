@@ -18,16 +18,12 @@ export default function BaseLink({ href, value, iconLeft, iconRight, isNewTab, c
 
 	if (!isOpenNewTab) {
 		return (
-			<Link href={href}>
-				<a
-					className={className}
-				>
-					{iconLeft && <span>{iconLeft}</span>}
-                	<span>{value}</span>
-					{iconRight && <span>{iconRight}</span>}
-				</a>
-			</Link>
-		);
+            <Link href={href} className={className}>
+                {iconLeft && <span>{iconLeft}</span>}
+                <span>{value}</span>
+                {iconRight && <span>{iconRight}</span>}
+            </Link>
+        );
 	}
 
 	return (

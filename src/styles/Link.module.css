@@ -2,6 +2,7 @@
     @apply
         inline-flex flex-nowrap
         transition-all duration-200 cursor-pointer
-        text-primary-700 underline-offset-2
+        text-primary-500 underline-offset-2
         hover:underline hover:bg-primary-100
+        visited:underline visited:text-primary-700
 }

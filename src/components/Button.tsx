@@ -2,15 +2,16 @@ import type { ReactNode } from 'react';
 import clsx from 'clsx';
 import styles from '#styles/Button.module.css';
 
-interface ButtonPropsType {
-	value: string,
+export interface ButtonPropsType {
+	value: string | ReactNode,
 	iconLeft?: ReactNode,
 	iconRight?: ReactNode,
 	variant: 'fill' | 'outline' | 'empty',
 	color: 'primary' | 'secondary',
+	onclick?: () => void,
 };
 
-export default function Button({ value, iconLeft, iconRight, variant, color }: ButtonPropsType) {
+export default function Button({ value, iconLeft, iconRight, variant, color, onclick }: ButtonPropsType) {
 	const LinkButtonStyle = clsx([
 		styles.button,
 		variant === 'fill' && styles.fill,
@@ -23,6 +24,7 @@ export default function Button({ value, iconLeft, iconRight, variant, color }: B
 	return (
 		<button
 			className={LinkButtonStyle}
+			onClick={onclick}
 		>
 			{iconLeft && <span>{iconLeft}</span>}
 			<span>{value}</span>

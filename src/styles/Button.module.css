@@ -1,6 +1,6 @@
 .button {
 	@apply
-		inline-flex flex-nowrap gap-1 p-2 m-0.5
+		inline-flex flex-nowrap flex-row justify-center gap-1 p-2 m-0.5
 		rounded-lg font-medium transition-all duration-200 cursor-pointer border
 }
 .button:focus {

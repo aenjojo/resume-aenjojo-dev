@@ -49,7 +49,7 @@ export default function HeaderLayout({ }: HeaderLayoutType) {
 			</header>
 			<nav
 				className={clsx([
-					'flex flex-col w-full z-20 transition-all duration-300 fixed bg-base-100',
+					'flex flex-col lg:hidden w-full z-20 transition-all duration-300 fixed bg-base-100',
 					isOpen ? 'top-14' : '-top-full'
 				])}
 			>
@@ -58,7 +58,7 @@ export default function HeaderLayout({ }: HeaderLayoutType) {
 			<section
 				onClick={() => setIsOpen(!isOpen)}
 				className={clsx([
-					'h-screen w-screen transition-all duration-300 bg-opacity-75 fixed top-0 z-10',
+					'h-screen w-screen lg:hidden transition-all duration-300 bg-opacity-75 fixed top-0 z-10',
 					isOpen ? 'visible bg-base-900' : 'invisible bg-transparent'
 				])}
 			></section>

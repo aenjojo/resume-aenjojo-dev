@@ -1,0 +1,23 @@
+.container {
+	@apply
+		flex flex-row gap-5
+		my-4 ml-6 mr-4 py-2
+}
+
+.line {
+	@apply
+		h-auto w-0
+		border-r-4 border-primary-500
+		flex-shrink
+}
+
+.content {
+	@apply flex flex-col flex-grow
+}
+
+.marker {
+	@apply
+		w-4 h-4 bg-base-100 absolute
+		border-4 border-primary-500 border-l-secondary-500 border-b-secondary-500
+		rotate-45 -translate-x-8 translate-y-1.5
+}

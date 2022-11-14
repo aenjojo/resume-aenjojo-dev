@@ -1,15 +1,19 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
+import styles from '#styles/Timeline.module.css';
 
-interface TimelineContainerPropsType {
+export interface TimelineContainerPropsType {
 	children: ReactNode | ReactNode[],
 }
 
 export default function TimelineContainer({ children }: TimelineContainerPropsType) {
 	return (
-		<div
-			className='flex flex-col gap-0 mx-4 py-2'
+		<section
+			className={styles.container}
 		>
-			{children}
-		</div>
+			<div className={styles.line}></div>
+			<section className={styles.content}>
+				{children}
+			</section>
+		</section>
 	);
 }

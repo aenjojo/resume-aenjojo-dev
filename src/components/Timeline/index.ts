@@ -1,7 +1,7 @@
 import TimelineContainer from './TimelineContainer';
-import TimelineSection from './TimelineSection';
+import TimelineItem from './TimelineItem';
 
 export {
 	TimelineContainer,
-	TimelineSection,
+	TimelineItem,
 };

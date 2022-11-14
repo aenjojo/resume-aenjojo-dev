@@ -8,10 +8,11 @@ export interface ButtonPropsType {
 	iconRight?: ReactNode,
 	variant: 'fill' | 'outline' | 'empty',
 	color: 'primary' | 'secondary',
+	className?: string,
 	onclick?: () => void,
 };
 
-export default function Button({ value, iconLeft, iconRight, variant, color, onclick }: ButtonPropsType) {
+export default function Button({ value, iconLeft, iconRight, variant, color, className, onclick }: ButtonPropsType) {
 	const LinkButtonStyle = clsx([
 		styles.button,
 		variant === 'fill' && styles.fill,
@@ -19,6 +20,7 @@ export default function Button({ value, iconLeft, iconRight, variant, color, onc
 		variant === 'empty' && styles.empty,
 		color === 'primary' && styles.primary,
 		color === 'secondary' && styles.secondary,
+		className,
 	]);
 	
 	return (

@@ -5,39 +5,49 @@ import { MdOpenInNew } from 'react-icons/md';
 export interface BaseLinkPropsType {
 	href: string | URL,
 	value: string,
-	iconLeft?: ReactNode,
-	iconRight?: ReactNode,
+	icon?: ReactNode,
 	isNewTab?: boolean,
 	className?: string,
 };
 
-export default function BaseLink({ href, value, iconLeft, iconRight, isNewTab, className }: BaseLinkPropsType) {
-	const isOpenNewTab = isNewTab !== undefined
-		? isNewTab
-		: href && !href.toString().startsWith('/') && !href.toString().startsWith('#');
+export default function BaseLink({ href, value, icon, isNewTab, className }: BaseLinkPropsType) {
+	const isOpenNewTab = isNewTab !== undefined ? isNewTab : false;
+	const isExternalLink = href && !href.toString().startsWith('/') && !href.toString().startsWith('#');
 
-	if (!isOpenNewTab) {
+	if (!isExternalLink) {
 		return (
-            <Link href={href} className={className}>
-                {iconLeft && <span>{iconLeft}</span>}
-                <span>{value}</span>
-                {iconRight && <span>{iconRight}</span>}
+            <Link
+				href={href}
+				target={isOpenNewTab ? '_blank' : '_self'}
+				className={className}
+			>
+				<>
+					{icon && <span>{icon}</span>}
+					<span>{value}</span>
+					{isOpenNewTab && (
+						<span>
+							<MdOpenInNew size={20} />
+						</span>
+					)}
+				</>
             </Link>
         );
 	}
 
 	return (
 		<a
-			target='_blank'
+			target={isOpenNewTab ? '_blank' : '_self'}
 			rel='noopener noreferrer'
 			href={href.toString()}
 			className={className}
 		>
-			{iconLeft && <span>{iconLeft}</span>}
+			{icon && <span>{icon}</span>}
 			<span>{value}</span>
-			<span>
-				{<MdOpenInNew size={20} />}
-			</span>
+			{isOpenNewTab && (
+				<span>
+					<MdOpenInNew size={20} />
+				</span>
+			)}
 		</a>
 	);
 }

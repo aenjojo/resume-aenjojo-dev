@@ -1,6 +1,6 @@
 .link {
     @apply
-        inline-flex flex-nowrap
+        inline-flex flex-nowrap items-center
         transition-all duration-200 cursor-pointer
         text-primary-500 underline-offset-2
         hover:underline hover:bg-primary-100

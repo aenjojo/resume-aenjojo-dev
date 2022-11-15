@@ -23,7 +23,7 @@ export default function BaseLink({ href, value, icon, isNewTab, className }: Bas
 			>
 				<>
 					{icon && <span>{icon}</span>}
-					<span>{value}</span>
+					{value !== '' && <span>{value}</span>}
 					{isOpenNewTab && (
 						<span>
 							<MdOpenInNew size={20} />
@@ -42,7 +42,7 @@ export default function BaseLink({ href, value, icon, isNewTab, className }: Bas
 			className={className}
 		>
 			{icon && <span>{icon}</span>}
-			<span>{value}</span>
+			{value !== '' && <span>{value}</span>}
 			{isOpenNewTab && (
 				<span>
 					<MdOpenInNew size={20} />

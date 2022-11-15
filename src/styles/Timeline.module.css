@@ -6,8 +6,8 @@
 
 .line {
 	@apply
-		h-auto w-0
-		border-r-4 border-primary-500
+		h-auto w-2 mr-3.5
+		border-x-2 border-l-secondary-500 border-r-primary-500
 		flex-shrink
 }
 
@@ -15,9 +15,17 @@
 	@apply flex flex-col flex-grow
 }
 
+.item {
+	@apply block my-2
+}
+
+.description {
+	@apply my-2
+}
+
 .marker {
 	@apply
-		w-4 h-4 bg-base-100 absolute
+		w-5 h-5 bg-base-100 absolute
 		border-4 border-primary-500 border-l-secondary-500 border-b-secondary-500
-		rotate-45 -translate-x-8 translate-y-1.5
+		rotate-45 -translate-x-12 translate-y-1.5
 }

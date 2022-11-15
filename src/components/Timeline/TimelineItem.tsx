@@ -4,19 +4,25 @@ import styles from '#styles/Timeline.module.css';
 
 export interface TimelineItemPropsType {
 	title: string,
+	subtitle: string,
+	date: string,
 	children: ReactNode | ReactNode[],
 }
 
-export default function TimelineItem({ title, children }: TimelineItemPropsType) {
+export default function TimelineItem({ title, subtitle, date, children }: TimelineItemPropsType) {
 	return (
 		<section
-			className='block'
+			className={styles.item}
 		>
 			<section>
 				<div className={styles.marker}></div>
-				<DisplayText value={title} size='XL' />
+				<div>
+					<DisplayText value={title} size='XL' className='text-primary-500' />
+					<DisplayText value={subtitle} size='M' />
+					<DisplayText value={date} size='S' className='text-base-600' />
+				</div>
 			</section>
-			<section>
+			<section className={styles.description}>
 				{children}
 			</section>
 		</section>

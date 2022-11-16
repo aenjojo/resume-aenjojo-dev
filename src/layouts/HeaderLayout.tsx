@@ -28,7 +28,7 @@ export default function HeaderLayout({ }: HeaderLayoutType) {
 
 	return (
 		<>
-			<header className='bg-base-100 sticky top-0 z-30'>
+			<header className='bg-base-100 border-b border-b-base-300'>
 				<section className='container mx-auto flex flex-row justify-between px-2 py-1'>
 					<div className='flex flex-row flex-nowrap p-2'>
 						<span className='text-2xl font-bold text-secondary-500'>Aen</span>
@@ -39,29 +39,24 @@ export default function HeaderLayout({ }: HeaderLayoutType) {
 					</nav>
 					<section className='flex lg:hidden'>
 						<Button
-							value={isOpen ? <MdClose size={24} /> : <MdMenu size={24} />}
+							value='Menu'
+							isSrOnly={true}
+							icon={isOpen ? <MdClose size={24} /> : <MdMenu size={24} />}
 							variant='fill'
 							color={isOpen ? 'secondary' : 'primary'}
 							onclick={() => setIsOpen(!isOpen)}
 						/>
 					</section>
 				</section>
+				<nav
+					className={clsx([
+						'flex flex-col lg:hidden w-full transition-all duration-300',
+						isOpen ? 'h-auto' : 'h-0 hidden'
+					])}
+				>
+					{NavigationList}
+				</nav>
 			</header>
-			<nav
-				className={clsx([
-					'flex flex-col lg:hidden w-full z-20 transition-all duration-300 fixed bg-base-100',
-					isOpen ? 'top-14' : '-top-full'
-				])}
-			>
-				{NavigationList}
-			</nav>
-			<section
-				onClick={() => setIsOpen(!isOpen)}
-				className={clsx([
-					'h-screen w-screen lg:hidden transition-all duration-300 bg-opacity-75 fixed top-0 z-10',
-					isOpen ? 'visible bg-base-900' : 'invisible bg-transparent'
-				])}
-			></section>
 		</>
 	);
 };

@@ -3,16 +3,16 @@ import clsx from 'clsx';
 import styles from '#styles/Button.module.css';
 
 export interface ButtonPropsType {
-	value: string | ReactNode,
-	iconLeft?: ReactNode,
-	iconRight?: ReactNode,
+	value: string,
+	icon?: ReactNode,
 	variant: 'fill' | 'outline' | 'empty',
 	color: 'primary' | 'secondary',
+	isSrOnly?: boolean,
 	className?: string,
 	onclick?: () => void,
 };
 
-export default function Button({ value, iconLeft, iconRight, variant, color, className, onclick }: ButtonPropsType) {
+export default function Button({ value, icon, variant, color, isSrOnly, className, onclick }: ButtonPropsType) {
 	const LinkButtonStyle = clsx([
 		styles.button,
 		variant === 'fill' && styles.fill,
@@ -28,9 +28,12 @@ export default function Button({ value, iconLeft, iconRight, variant, color, cla
 			className={LinkButtonStyle}
 			onClick={onclick}
 		>
-			{iconLeft && <span>{iconLeft}</span>}
-			<span>{value}</span>
-			{iconRight && <span>{iconRight}</span>}
+			{icon && <span>{icon}</span>}
+			{value !== '' && (
+				<span className={isSrOnly ? 'sr-only' : ''}>
+					{value}
+				</span>
+			)}
 		</button>
 	);
 };

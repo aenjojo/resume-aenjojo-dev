@@ -14,7 +14,7 @@ export default function TimelineItem({ title, subtitle, date, children }: Timeli
 		<section
 			className={styles.item}
 		>
-			<section>
+			<section className={styles.header}>
 				<div className={styles.marker}></div>
 				<div>
 					<DisplayText value={title} size='XL' className='text-primary-500' />

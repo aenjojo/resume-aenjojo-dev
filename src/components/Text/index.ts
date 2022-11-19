@@ -1,5 +1,1 @@
-import DisplayText from './DisplayText';
-
-export {
-	DisplayText,
-};
+export { DisplayText } from './DisplayText';

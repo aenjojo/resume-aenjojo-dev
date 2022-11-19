@@ -10,7 +10,7 @@ export interface BaseLinkPropsType {
 	className?: string,
 };
 
-export default function BaseLink({ href, value, icon, isNewTab, className }: BaseLinkPropsType) {
+export function BaseLink({ href, value, icon, isNewTab, className }: BaseLinkPropsType) {
 	const isOpenNewTab = isNewTab !== undefined ? isNewTab : false;
 	const isExternalLink = href && !href.toString().startsWith('/') && !href.toString().startsWith('#');
 

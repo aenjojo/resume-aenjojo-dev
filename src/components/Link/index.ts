@@ -1,9 +1,3 @@
-import ButtonLink from './ButtonLink';
-import TextLink from './TextLink';
-import BaseLink from './BaseLink';
-
-export {
-	ButtonLink,
-	TextLink,
-	BaseLink,
-};
+export { BaseLink } from './BaseLink';
+export { ButtonLink } from './ButtonLink';
+export { TextLink } from './TextLink';

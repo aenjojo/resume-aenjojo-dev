@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import BaseLink, { type BaseLinkPropsType } from './BaseLink';
+import { BaseLink, type BaseLinkPropsType } from './BaseLink';
 import styles from '#styles/Button.module.css';
 
 export interface ButtonLinkPropsType extends BaseLinkPropsType {
@@ -8,7 +8,7 @@ export interface ButtonLinkPropsType extends BaseLinkPropsType {
 	isReversed?: boolean,
 };
 
-export default function ButtonLink({ href, value, icon, isNewTab, className, variant, color, isReversed }: ButtonLinkPropsType) {
+export function ButtonLink({ href, value, icon, isNewTab, className, variant, color, isReversed }: ButtonLinkPropsType) {
 	const ButtonLinkStyle = clsx([
 		styles.button,
 		variant === 'fill' && styles.fill,

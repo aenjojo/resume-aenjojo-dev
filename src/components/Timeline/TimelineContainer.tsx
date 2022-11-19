@@ -5,7 +5,7 @@ export interface TimelineContainerPropsType {
 	children: ReactNode | ReactNode[],
 }
 
-export default function TimelineContainer({ children }: TimelineContainerPropsType) {
+export function TimelineContainer({ children }: TimelineContainerPropsType) {
 	return (
 		<section
 			className={styles.container}

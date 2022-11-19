@@ -1,7 +1,2 @@
-import TimelineContainer from './TimelineContainer';
-import TimelineItem from './TimelineItem';
-
-export {
-	TimelineContainer,
-	TimelineItem,
-};
+export { TimelineContainer } from './TimelineContainer';
+export { TimelineItem } from './TimelineItem';

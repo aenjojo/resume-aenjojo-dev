@@ -9,7 +9,7 @@ export interface TimelineItemPropsType {
 	children: ReactNode | ReactNode[],
 }
 
-export default function TimelineItem({ title, subtitle, date, children }: TimelineItemPropsType) {
+export function TimelineItem({ title, subtitle, date, children }: TimelineItemPropsType) {
 	return (
 		<section
 			className={styles.item}

@@ -6,7 +6,7 @@ export interface DisplayTextPropsType {
 	className?: string,
 }
 
-export default function DisplayText({ value, size, className }: DisplayTextPropsType) {
+export function DisplayText({ value, size, className }: DisplayTextPropsType) {
 	const DisplayTextStyle = clsx([
 		'block text-base-900',
 		size === 'XS' && 'text-xs',

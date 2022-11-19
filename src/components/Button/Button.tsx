@@ -9,10 +9,10 @@ export interface ButtonPropsType {
 	color: 'primary' | 'secondary',
 	isSrOnly?: boolean,
 	className?: string,
-	onclick?: () => void,
+	onclick?(): void,
 };
 
-export default function Button({ value, icon, variant, color, isSrOnly, className, onclick }: ButtonPropsType) {
+export function Button({ value, icon, variant, color, isSrOnly, className, onclick }: ButtonPropsType) {
 	const LinkButtonStyle = clsx([
 		styles.button,
 		variant === 'fill' && styles.fill,

@@ -1,4 +1,4 @@
-import Button from '#components/Button';
+import { Button } from '#components/Button';
 import { ButtonLink } from '#components/Link';
 import { MdMenu, MdClose } from 'react-icons/md';
 import { useState } from 'react';

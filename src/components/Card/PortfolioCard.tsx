@@ -6,7 +6,6 @@ import { MdOutlineCode, MdOutlineArticle, MdOutlinePublic } from 'react-icons/md
 
 export interface PortfolioCardPropsType {
 	imageSource: string,
-	imageAlt: string,
 	tags: string[],
 	title: string,
 	description: string,
@@ -14,13 +13,13 @@ export interface PortfolioCardPropsType {
 	codeUrl?: string,
 }
 
-export function PortfolioCard({ imageSource, imageAlt, title, description, projectUrl, codeUrl }: PortfolioCardPropsType) {
+export function PortfolioCard({ imageSource, title, description, projectUrl, codeUrl }: PortfolioCardPropsType) {
 	return (
 		<CardContainer>
 			<section className='block relative overflow-hidden h-48'>
 				<Image
 					src={imageSource}
-					alt={imageAlt}
+					alt=''
 					fill={true}
 					className='object-cover'
 					priority={false}

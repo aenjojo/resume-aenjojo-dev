@@ -4,9 +4,10 @@ import styles from '#styles/Link.module.css';
 
 export interface TextLinkPropsType extends BaseLinkPropsType {};
 
-export function TextLink({ href, value, isNewTab, className }: TextLinkPropsType) {
+export function TextLink({ href, value, isNewTab, className, children }: TextLinkPropsType) {
 	const TextLinkStyle = clsx([
 		styles.link,
+		!children ? styles.inline : 'block',
 		className,
 	]);
 
@@ -16,6 +17,8 @@ export function TextLink({ href, value, isNewTab, className }: TextLinkPropsType
 			value={value}
 			className={TextLinkStyle}
 			isNewTab={isNewTab}
-		/>
+		>
+			{children}
+		</BaseLink>
 	);
 }

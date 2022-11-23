@@ -1,8 +1,18 @@
 .link {
     @apply
-        inline-flex flex-nowrap items-center
-        transition-all duration-200 cursor-pointer
-        text-primary-500 underline-offset-2
-        hover:underline hover:bg-primary-100
-        visited:underline visited:text-primary-700
+        transition-all duration-200
+        cursor-pointer decoration-2 underline-offset-2
+        text-primary-500
+        
+        hover:bg-primary-200 hover:text-primary-600 hover:bg-opacity-30
+        hover:underline
+
+        focus:bg-primary-200 focus:text-primary-600 focus:bg-opacity-30
+        focus:outline-2 focus:outline-primary-300
+
+        focus:hover:no-underline
+}
+
+.inline {
+    @apply inline-flex flex-nowrap items-center
 }

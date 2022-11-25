@@ -6,8 +6,8 @@
 
 .line {
 	@apply
-		h-auto w-2 mr-3.5
-		border-x-2 border-l-secondary-500 border-r-primary-500
+		h-auto w-2 mr-3.5 bg-primary-100
+		border-x-2 border-x-primary-300
 		flex-shrink
 }
 
@@ -34,6 +34,6 @@
 .marker {
 	@apply
 		w-5 h-5 bg-base-100 absolute
-		border-4 border-primary-500 border-l-secondary-500 border-b-secondary-500
+		border-4 border-primary-500 rounded-full
 		rotate-45 -translate-x-12 translate-y-1.5
 }

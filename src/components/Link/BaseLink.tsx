@@ -8,13 +8,11 @@ export interface BaseLinkPropsType {
 	icon?: ReactNode,
 	isNewTab?: boolean,
 	className?: string,
-	children?: ReactNode,
 };
 
-export function BaseLink({ href, value, icon, isNewTab, className, children }: BaseLinkPropsType) {
+export function BaseLink({ href, value, icon, isNewTab, className }: BaseLinkPropsType) {
 	const isOpenNewTab = isNewTab !== undefined ? isNewTab : false;
-	const isExternalLink = href && !href.toString().startsWith('/') && !href.toString().startsWith('#');
-	const isChildrenExist = Boolean(children);
+	const isExternalLink = Boolean(href) && !href.toString().startsWith('/') && !href.toString().startsWith('#');
 
 	if (!isExternalLink) {
 		return (
@@ -25,11 +23,7 @@ export function BaseLink({ href, value, icon, isNewTab, className, children }: B
 			>
 				<>
 					{icon && <span>{icon}</span>}
-					{
-						isChildrenExist
-							? children
-							: value !== '' && <span>{value}</span>
-					}
+					{value !== '' && <span>{value}</span>}
 					{isOpenNewTab && (
 						<span>
 							<MdOpenInNew size={20} />
@@ -48,11 +42,7 @@ export function BaseLink({ href, value, icon, isNewTab, className, children }: B
 			className={className}
 		>
 			{icon && <span>{icon}</span>}
-			{
-				isChildrenExist
-					? children
-					: value !== '' && <span>{value}</span>
-			}
+			{value !== '' && <span>{value}</span>}
 			{isOpenNewTab && (
 				<span>
 					<MdOpenInNew size={20} />

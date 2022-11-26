@@ -5,7 +5,6 @@ import { GenericTitle } from '#components/Heading';
 import { ButtonLink } from '#components/Link';
 import { MdOutlineCode, MdOutlineArticle, MdOutlinePublic } from 'react-icons/md';
 import styles from '#styles/Link.module.css';
-import clsx from 'clsx';
 
 export interface PortfolioCardPropsType {
 	title: string,

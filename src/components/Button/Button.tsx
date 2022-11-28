@@ -7,12 +7,12 @@ export interface ButtonPropsType {
 	icon?: ReactNode,
 	variant: 'fill' | 'outline' | 'empty',
 	color: 'primary' | 'secondary',
-	isSrOnly?: boolean,
+	iconOnly?: boolean,
 	className?: string,
 	onclick?(): void,
 };
 
-export function Button({ value, icon, variant, color, isSrOnly, className, onclick }: ButtonPropsType) {
+export function Button({ value, icon, variant, color, iconOnly, className, onclick }: ButtonPropsType) {
 	const LinkButtonStyle = clsx([
 		styles.button,
 		variant === 'fill' && styles.fill,
@@ -30,7 +30,7 @@ export function Button({ value, icon, variant, color, isSrOnly, className, oncli
 		>
 			{icon && <span>{icon}</span>}
 			{value !== '' && (
-				<span className={isSrOnly ? 'sr-only' : ''}>
+				<span className={iconOnly ? 'sr-only' : ''}>
 					{value}
 				</span>
 			)}

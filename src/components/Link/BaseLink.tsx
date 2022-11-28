@@ -6,25 +6,29 @@ export interface BaseLinkPropsType {
 	href: string | URL,
 	value: string,
 	icon?: ReactNode,
-	isNewTab?: boolean,
+	iconOnly?: boolean,
+	openInNewTab?: boolean,
 	className?: string,
 };
 
-export function BaseLink({ href, value, icon, isNewTab, className }: BaseLinkPropsType) {
-	const isOpenNewTab = isNewTab !== undefined ? isNewTab : false;
+export function BaseLink({ href, value, icon, iconOnly, openInNewTab, className }: BaseLinkPropsType) {
 	const isExternalLink = Boolean(href) && !href.toString().startsWith('/') && !href.toString().startsWith('#');
 
 	if (!isExternalLink) {
 		return (
             <Link
 				href={href}
-				target={isOpenNewTab ? '_blank' : '_self'}
+				target={openInNewTab ? '_blank' : '_self'}
 				className={className}
 			>
 				<>
 					{icon && <span>{icon}</span>}
-					{value !== '' && <span>{value}</span>}
-					{isOpenNewTab && (
+					{value !== '' && (
+						<span className={iconOnly ? 'sr-only' : ''}>
+							{value}
+						</span>
+					)}
+					{openInNewTab && !iconOnly && (
 						<span>
 							<MdOpenInNew size={20} />
 						</span>
@@ -36,14 +40,18 @@ export function BaseLink({ href, value, icon, isNewTab, className }: BaseLinkPro
 
 	return (
 		<a
-			target={isOpenNewTab ? '_blank' : '_self'}
+			target={openInNewTab ? '_blank' : '_self'}
 			rel='noopener noreferrer'
 			href={href.toString()}
 			className={className}
 		>
 			{icon && <span>{icon}</span>}
-			{value !== '' && <span>{value}</span>}
-			{isOpenNewTab && (
+			{value !== '' && (
+				<span className={iconOnly ? 'sr-only' : ''}>
+					{value}
+				</span>
+			)}
+			{openInNewTab && !iconOnly && (
 				<span>
 					<MdOpenInNew size={20} />
 				</span>

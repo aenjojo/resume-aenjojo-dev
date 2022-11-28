@@ -5,10 +5,10 @@ import styles from '#styles/Button.module.css';
 export interface ButtonLinkPropsType extends BaseLinkPropsType {
 	variant: 'fill' | 'outline' | 'empty',
 	color: 'primary' | 'secondary',
-	isReversed?: boolean,
+	reversed?: boolean,
 };
 
-export function ButtonLink({ href, value, icon, isNewTab, className, variant, color, isReversed }: ButtonLinkPropsType) {
+export function ButtonLink({ href, value, icon, openInNewTab, iconOnly, variant, color, reversed, className }: ButtonLinkPropsType) {
 	const ButtonLinkStyle = clsx([
 		styles.button,
 		variant === 'fill' && styles.fill,
@@ -16,7 +16,7 @@ export function ButtonLink({ href, value, icon, isNewTab, className, variant, co
 		variant === 'empty' && styles.empty,
 		color === 'primary' && styles.primary,
 		color === 'secondary' && styles.secondary,
-		isReversed ? 'flex-row-reverse' : 'flex-row',
+		reversed ? 'flex-row-reverse' : 'flex-row',
 		className,
 	]);
 
@@ -25,7 +25,8 @@ export function ButtonLink({ href, value, icon, isNewTab, className, variant, co
 			href={href}
 			value={value}
 			icon={icon}
-			isNewTab={isNewTab}
+			openInNewTab={openInNewTab}
+			iconOnly={iconOnly}
 			className={ButtonLinkStyle}
 		/>
 	);

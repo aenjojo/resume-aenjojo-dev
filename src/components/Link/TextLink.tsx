@@ -4,7 +4,7 @@ import styles from '#styles/Link.module.css';
 
 export interface TextLinkPropsType extends BaseLinkPropsType {};
 
-export function TextLink({ href, value, isNewTab, className }: TextLinkPropsType) {
+export function TextLink({ href, value, openInNewTab, className }: TextLinkPropsType) {
 	const TextLinkStyle = clsx([
 		styles.base,
 		styles.text,
@@ -16,7 +16,7 @@ export function TextLink({ href, value, isNewTab, className }: TextLinkPropsType
 			href={href}
 			value={value}
 			className={TextLinkStyle}
-			isNewTab={isNewTab}
+			openInNewTab={openInNewTab}
 		/>
 	);
 }

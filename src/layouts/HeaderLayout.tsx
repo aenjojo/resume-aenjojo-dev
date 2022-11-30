@@ -26,10 +26,10 @@ export default function HeaderLayout() {
 	return (
 		<header className='bg-gradient-to-r from-primary-100 to-secondary-100 border-b border-b-primary-200'>
 			<section className='container mx-auto flex flex-row justify-between px-2 py-1'>
-					<div className='flex flex-row justify-center items-center'>
-						<DisplayText value='Aen' size='XXL' className='text-center text-secondary-500 inline-block' />
-						<DisplayText value='Jojo' size='XXL' className='text-center text-primary-500 inline-block' />
-					</div>
+				<div className='flex flex-row justify-center items-center'>
+					<DisplayText value='Aen' size='XXL' className='text-center text-secondary-500 inline-block' />
+					<DisplayText value='Jojo' size='XXL' className='text-center text-primary-500 inline-block' />
+				</div>
 				<nav className='hidden lg:flex lg:flex-row'>
 					{NavigationList}
 				</nav>

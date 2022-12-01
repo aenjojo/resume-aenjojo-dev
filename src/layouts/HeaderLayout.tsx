@@ -4,6 +4,8 @@ import { DisplayText } from '#components/Text';
 import { MdOutlineMenu, MdOutlineClose } from 'react-icons/md';
 import { useState } from 'react';
 import clsx from 'clsx';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function HeaderLayout() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -26,10 +28,13 @@ export default function HeaderLayout() {
 	return (
 		<header className='bg-gradient-to-r from-primary-100 to-secondary-100 border-b border-b-primary-200'>
 			<section className='container mx-auto flex flex-row justify-between px-2 py-1'>
-				<div className='flex flex-row justify-center items-center'>
+				<Link href='/' className='flex flex-row justify-center items-center'>
+					<div className='relative w-6 h-8 mr-2'>
+						<Image alt='' src='/AenJojo - Transparent.png' fill={true} className='object-contain' sizes='25vw' />
+					</div>
 					<DisplayText value='Aen' size='XXL' className='text-center text-secondary-500 inline-block' />
 					<DisplayText value='Jojo' size='XXL' className='text-center text-primary-500 inline-block' />
-				</div>
+				</Link>
 				<nav className='hidden lg:flex lg:flex-row'>
 					{NavigationList}
 				</nav>

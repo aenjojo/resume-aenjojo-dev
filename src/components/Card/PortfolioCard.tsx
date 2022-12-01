@@ -15,7 +15,7 @@ export interface PortfolioCardPropsType {
 }
 
 export function PortfolioCard({ title, description, imageSource, demoUrl, codeUrl }: PortfolioCardPropsType) {
-	const detailPageUrl = '/projects/'+title.toLowerCase().replaceAll(' ', '-');
+	const detailPageUrl = `/projects/${title.toLowerCase().replaceAll(' ', '-')}`;
 
 	return (
 		<CardContainer>

@@ -8,8 +8,15 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "yarn@1.22.19",
   "dependencies": {
+    "@mdx-js/loader": "^2.1.5",
+    "@mdx-js/react": "^2.1.5",
     "@next/font": "^13.0.5",
+    "@next/mdx": "13.0.5",
     "@tailwindcss/typography": "^0.5.7",
     "clsx": "^1.2.1",
     "date-fns": "^2.29.2",
@@ -17,9 +24,7 @@
     "next": "^13.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.4.0",
-    "remark": "^14.0.2",
-    "remark-html": "^15.0.1"
+    "react-icons": "^4.4.0"
   },
   "devDependencies": {
     "@types/node": "18.7.16",

@@ -8,7 +8,7 @@ export interface DisplayTextPropsType {
 
 export function DisplayText({ value, size, className }: DisplayTextPropsType) {
 	const DisplayTextStyle = clsx([
-		'block text-base-900',
+		'block',
 		size === 'XS' && 'text-xs',
 		size === 'S' && 'text-sm',
 		size === 'M' && 'text-base',

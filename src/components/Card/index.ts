@@ -1,2 +1,2 @@
-export { CardContainer } from './CardContainer';
-export { PortfolioCard } from './PortfolioCard';
+export { CardContainer, type CardPropsType } from './CardContainer';
+export { PortfolioCard, type PortfolioCardPropsType } from './PortfolioCard';

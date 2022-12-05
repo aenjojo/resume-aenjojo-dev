@@ -1,1 +1,1 @@
-export { DisplayText } from './DisplayText';
+export { DisplayText, type DisplayTextPropsType } from './DisplayText';

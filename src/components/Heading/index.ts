@@ -1,6 +1,4 @@
-export { MainTitle } from './MainTitle';
-export { SectionTitle } from './SectionTitle';
-export { SubSectionTitle } from './SubSectionTitle';
-export { GenericTitle } from './GenericTitle';
-
-export type { GenericTitlePropsType } from './GenericTitle';
+export { MainTitle, type MainTitlePropsType } from './MainTitle';
+export { SectionTitle, type SectionTitlePropsType } from './SectionTitle';
+export { SubSectionTitle, type SubSectionTitlePropsType } from './SubSectionTitle';
+export { GenericTitle, type GenericTitlePropsType } from './GenericTitle';

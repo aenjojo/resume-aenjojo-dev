@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { CardContainer } from './CardContainer';
 import { GenericTitle } from '#components/Heading';
 import { ButtonLink } from '#components/Link';
-import { MdOutlineCode, MdOutlineArticle, MdOutlinePublic } from 'react-icons/md';
+import { MdOutlineCode, MdOutlinePublic } from 'react-icons/md';
 import styles from '#styles/Link.module.css';
 
 export interface PortfolioCardPropsType {
@@ -15,7 +15,7 @@ export interface PortfolioCardPropsType {
 }
 
 export function PortfolioCard({ title, description, imageSource, demoUrl, codeUrl }: PortfolioCardPropsType) {
-	const detailPageUrl = `/projects/${title.toLowerCase().replaceAll(' ', '-')}`;
+	const projectPageUrl = `/projects/${title.toLowerCase().replaceAll(' ', '-')}`;
 
 	return (
 		<CardContainer>
@@ -32,7 +32,7 @@ export function PortfolioCard({ title, description, imageSource, demoUrl, codeUr
 			<section className='flex flex-col gap-4 p-4 border-t border-primary-200 h-48'>
 				<div className='flex-grow'>
 					<Link
-						href={detailPageUrl}
+						href={projectPageUrl}
 						className={styles.base}
 					>
 						<GenericTitle>{title}</GenericTitle>

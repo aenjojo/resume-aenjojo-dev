@@ -18,6 +18,7 @@
     "paths": {
       "#components/*": ["./src/components/*"],
       "#layouts/*": ["./src/layouts/*"],
+      "#libs/*": ["./src/libs/*"],
       "#services/*": ["./src/services/*"],
       "#styles/*": ["./src/styles/*"]
     }

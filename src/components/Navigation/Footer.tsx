@@ -2,7 +2,7 @@ import { ButtonLink } from '#components/Link';
 import { DisplayText } from '#components/Text';
 import { FaInstagram, FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 
-export default function FooterLayout() {
+export function Footer() {
 	const SocialMediaList = [
 		{
 			name: 'Instagram',

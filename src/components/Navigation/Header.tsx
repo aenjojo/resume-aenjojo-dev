@@ -7,7 +7,7 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function HeaderLayout() {
+export function Header() {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const NavigationList = [

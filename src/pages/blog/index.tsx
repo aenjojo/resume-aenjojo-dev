@@ -1,34 +1,33 @@
-import Link from 'next/link';
 import MainLayout from '#layouts/MainLayout';
 import { MainTitle, SectionTitle } from '#components/Heading';
-import { getPosts } from '#libs/posts';
+import { getPosts, type metaDataType } from '#libs/posts';
+import { PostCard } from '#components/Card';
 
 export interface BlogPropsType {
 	postsData: {
 		id: string,
-		meta: {
-			author: string,
-			title: string,
-		},
+		meta: metaDataType,
 	}[],
 }
 
 export default function Blog({ postsData }: BlogPropsType) {
 	return (
 		<MainLayout>
-			<MainTitle>All Blog Posts</MainTitle>
-			{postsData.map(({ id, meta }) => (
-				<Link 
-					key={id}
-					href={`/blog/posts/${id}`}
-					className='block mt-2 p-4 border rounded-lg border-primary-300 hover:bg-primary-100'
-				>
-					<>
-						<SectionTitle>{meta.title}</SectionTitle>
-						<p>{meta.author}</p>
-					</>
-				</Link>
-			))}
+			<section className='w-full lg:w-10/12 mx-auto'>
+				<MainTitle>All Blog Posts</MainTitle>
+				<section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 mt-4 justify-center'>
+					{postsData.map(({ id, meta }) => (
+						<PostCard
+							key={id}
+							id={id}
+							title={meta.title}
+							description={meta.excerpt}
+							tags={meta.tags}
+							date={meta.date}
+						/>
+					))}
+				</section>
+			</section>
 		</MainLayout>
 	)
 }

@@ -1,0 +1,44 @@
+{
+	"TS Component Starter": {
+		"scope": "typescriptreact",
+		"prefix": "tscomp",
+		"body": [
+			"export interface $1PropsType {",
+			"\t$2",
+			"}",
+			"",
+			"export function $1({ $3 }: $1PropsType) {",
+			"\treturn (",
+			"\t\t<>$4</>",
+			"\t);",
+			"}"
+		],
+		"description": "Create basic component setup with tsx component starter template"
+	},
+	"MDX Post Starter": {
+		"scope": "mdx",
+		"prefix": "mdxpost",
+		"body": [
+			"import MainLayout from '#layouts/MainLayout';",
+			"import BlogLayout from '#layouts/BlogLayout';",
+			"",
+			"export const meta = {",
+			"\ttitle: '$1',",
+			"\texcerpt: '$2',",
+			"\tdate: '$3',",
+			"\ttags: [$4],",
+			"};",
+			"",
+			"$5",
+			"",
+			"export default ({ children }) => (",
+			"\t<MainLayout>",
+			"\t\t<BlogLayout date={meta.date}>",
+			"\t\t\t{children}",
+			"\t\t</BlogLayout>",
+			"\t</MainLayout>",
+			");"
+		],
+		"description": "Create basic blog post setup with mdx page starter template"
+	}
+}

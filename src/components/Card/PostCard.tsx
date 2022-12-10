@@ -6,14 +6,15 @@ import { DisplayText } from '#components/Text';
 import styles from '#styles/Link.module.css';
 
 export interface PostCardPropsType {
+	id: string,
 	title: string,
 	date: string,
 	description: string,
 	tags?: string[],
 }
 
-export function PostCard({ title, date, description, tags }: PostCardPropsType) {
-	const postPageUrl = `/blog/posts/${title.toLowerCase().replaceAll(' ', '-')}`;
+export function PostCard({ id, title, date, description, tags }: PostCardPropsType) {
+	const postPageUrl = `/blog/posts/${id}`;
 
 	return (
 		<CardContainer>

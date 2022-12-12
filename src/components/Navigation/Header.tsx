@@ -35,7 +35,7 @@ export function Header() {
 					<DisplayText value='Aen' size='XXL' className='text-center text-secondary-500 inline-block' />
 					<DisplayText value='Jojo' size='XXL' className='text-center text-primary-500 inline-block' />
 				</Link>
-				<nav className='hidden lg:flex lg:flex-row'>
+				<nav className='hidden lg:flex lg:flex-row lg:gap-2'>
 					{NavigationList}
 				</nav>
 				<section className='flex lg:hidden'>
@@ -54,7 +54,7 @@ export function Header() {
 			</section>
 			<nav
 				className={clsx([
-					'flex flex-col lg:hidden w-full transition-all duration-300',
+					'flex flex-col gap-2 lg:hidden w-10/12 mx-auto my-2 transition-all duration-300',
 					isOpen ? 'h-auto' : 'h-0 hidden'
 				])}
 			>

@@ -1,5 +1,6 @@
 import { ButtonLink } from '#components/Link';
 import { DisplayText } from '#components/Text';
+import { ButtonGroup } from '#components/Button';
 import { FaInstagram, FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 export function Footer() {
@@ -44,9 +45,9 @@ export function Footer() {
 					</div>
 					<DisplayText value='aenjojo © 2022' size='S' className='text-center' />
 				</div>
-				<div>
+				<ButtonGroup direction='row'>
 					{SocialMediaList}
-				</div>
+				</ButtonGroup>
 			</section>
 		</footer>
 	);

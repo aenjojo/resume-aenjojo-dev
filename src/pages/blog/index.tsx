@@ -1,5 +1,5 @@
 import MainLayout from '#layouts/MainLayout';
-import { MainTitle, SectionTitle } from '#components/Heading';
+import { MainTitle } from '#components/Heading';
 import { getPosts, type metaDataType } from '#libs/posts';
 import { PostCard } from '#components/Card';
 

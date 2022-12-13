@@ -6,20 +6,23 @@ export interface ButtonPropsType {
 	value: string,
 	icon?: ReactNode,
 	variant: 'fill' | 'outline' | 'empty',
-	color: 'primary' | 'secondary',
+	reverse?: boolean,
 	iconOnly?: boolean,
 	className?: string,
 	onclick?(): void,
 };
 
-export function Button({ value, icon, variant, color, iconOnly, className, onclick }: ButtonPropsType) {
+export function Button({ value, icon, variant, reverse, iconOnly, className, onclick }: ButtonPropsType) {
 	const LinkButtonStyle = clsx([
 		styles.button,
 		variant === 'fill' && styles.fill,
 		variant === 'outline' && styles.outline,
 		variant === 'empty' && styles.empty,
-		color === 'primary' && styles.primary,
-		color === 'secondary' && styles.secondary,
+		iconOnly
+			? 'px-2' : !icon
+			? 'px-4' : reverse
+			? 'pl-4 pr-3' : 'pl-3 pr-4',
+		reverse ? 'flex-row-reverse' : 'flex-row',
 		className,
 	]);
 	

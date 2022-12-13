@@ -44,7 +44,6 @@ export function PortfolioCard({ title, description, imageSource, demoUrl, codeUr
 						value='Code'
 						href={codeUrl}
 						variant='empty'
-						color='primary'
 						icon={<MdOutlineCode size={20} />}
 						className='justify-center'
 					/>}
@@ -52,7 +51,6 @@ export function PortfolioCard({ title, description, imageSource, demoUrl, codeUr
 						value='Demo'
 						href={demoUrl}
 						variant='empty'
-						color='primary'
 						icon={<MdOutlinePublic size={20} />}
 						className='justify-center'
 					/>}

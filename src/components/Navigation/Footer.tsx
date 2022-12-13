@@ -27,7 +27,6 @@ export function Footer() {
 			key={`${name}@${link}`}
 			value={name}
 			href={link}
-			color='primary'
 			variant='empty'
 			icon={icon}
 			iconOnly

@@ -21,19 +21,17 @@ export function BaseLink({ href, value, icon, iconOnly, openInNewTab, className 
 				target={openInNewTab ? '_blank' : '_self'}
 				className={className}
 			>
-				<>
-					{icon && <span>{icon}</span>}
-					{value !== '' && (
-						<span className={iconOnly ? 'sr-only' : ''}>
-							{value}
-						</span>
-					)}
-					{openInNewTab && !iconOnly && (
-						<span>
-							<MdOpenInNew size={20} />
-						</span>
-					)}
-				</>
+				{icon && <span>{icon}</span>}
+				{value !== '' && (
+					<span className={iconOnly ? 'sr-only' : ''}>
+						{value}
+					</span>
+				)}
+				{openInNewTab && !iconOnly && (
+					<span>
+						<MdOpenInNew size={20} />
+					</span>
+				)}
             </Link>
         );
 	}

@@ -1,8 +1,8 @@
 import type { AppProps } from 'next/app';
 import { Outfit } from '@next/font/google';
-import '#styles/globals.css';
 import { MDXProvider } from '@mdx-js/react';
 import { components } from '#components/mdx.index';
+import '#styles/globals.css';
 
 const outfit = Outfit({
 	subsets: ['latin'],

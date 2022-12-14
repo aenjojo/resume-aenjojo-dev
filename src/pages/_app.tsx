@@ -1,17 +1,22 @@
 import type { AppProps } from 'next/app';
-import { Outfit } from '@next/font/google';
+import { Spline_Sans, Spline_Sans_Mono } from '@next/font/google';
 import { MDXProvider } from '@mdx-js/react';
 import { components } from '#components/mdx.index';
 import '#styles/globals.css';
 
-const outfit = Outfit({
-	subsets: ['latin'],
-	variable: '--font-outfit',
+const splineSans = Spline_Sans({
+	subsets: ['latin', 'latin-ext'],
+	variable: '--font-spl-sans',
+});
+
+const splineMono = Spline_Sans_Mono({
+	subsets: ['latin', 'latin-ext'],
+	variable: '--font-spl-mono',
 });
 
 export default function MyApp({ Component, pageProps }: AppProps) {
 	return (
-		<main className={`${outfit.variable} font-sans`}>
+		<main className={`${splineSans.variable} ${splineMono.variable} font-sans`}>
 			<MDXProvider components={components}>
 				<Component {...pageProps} />
 			</MDXProvider>

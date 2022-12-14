@@ -67,7 +67,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ['var(--font-outfit)', ...fontFamily.sans],
+        sans: ['var(--font-spl-sans)', ...fontFamily.sans],
+        mono: ['var(--font-spl-mono)', ...fontFamily.mono],
       },
     },
   },

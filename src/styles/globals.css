@@ -5,3 +5,34 @@
 :root {
 	@apply font-sans bg-base-100
 }
+
+p {
+	@apply mt-1 mb-2
+}
+
+/* list */
+ol {
+	@apply list-decimal list-outside py-2
+}
+ul {
+	@apply list-disc list-outside py-2
+}
+li {
+	@apply ml-6 pl-4
+}
+
+/* code block */
+code {
+	@apply
+		p-1 font-mono rounded
+		bg-base-300 bg-opacity-30
+		
+		only:bg-transparent only:p-0 
+}
+pre {
+	@apply
+		my-2 py-2 pr-2 pl-4
+		bg-base-300 bg-opacity-30
+		border-l-8 border-l-primary-500 rounded-lg
+		overflow-x-auto
+}

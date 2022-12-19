@@ -18,18 +18,22 @@ export async function getPosts() {
 	const filenames = await readdir(postsDirectory);
 
 	const postsDataPromises = filenames.map(async filename => {
-		const mdxFile: importType = await import(`./../pages/blog/posts/${filename}`);
-
-		const postId = filename.replace(/.mdx$/, '');
-		const postMeta = mdxFile.meta;
-
-		return {
-			id: postId,
-			meta: postMeta,
-		};
+		return getSinglePost(filename);
 	});
 
 	const postsData = await Promise.all(postsDataPromises);
 
 	return postsData;
+}
+
+export async function getSinglePost(filename: string) {
+	const mdxFile: importType = await import(`./../pages/blog/posts/${filename}`);
+
+	const postId = filename.replace(/.mdx$/, '');
+	const postMeta = mdxFile.meta;
+
+	return {
+		id: postId,
+		meta: postMeta,
+	};
 }

@@ -7,7 +7,7 @@
 }
 
 p {
-	@apply mt-1 mb-2
+	@apply mt-2 mb-4
 }
 
 /* list */
@@ -31,8 +31,32 @@ code {
 }
 pre {
 	@apply
-		my-2 py-2 pr-2 pl-4
+		my-4 py-2 pr-2 pl-4
 		bg-base-300 bg-opacity-30
-		border-l-8 border-l-primary-500 rounded-lg
+		border-l-8 border-l-primary-500 rounded-lg 
 		overflow-x-auto
+}
+
+/* blockquote */
+blockquote {
+	@apply
+		my-4 py-2 pr-2 pl-4
+		bg-base-300 bg-opacity-30
+		border border-base-300 rounded-lg
+}
+
+/* table */
+table {
+	@apply my-4 w-full border-collapse
+}
+tr {
+	@apply
+		odd:bg-base-200 odd:bg-opacity-30
+		even:bg-base-400 even:bg-opacity-30
+}
+th {
+	@apply text-center bg-primary-200 px-2 uppercase
+}
+td {
+	@apply px-2
 }

@@ -3,11 +3,10 @@ import { GenericTitlePropsType } from './GenericTitle';
 
 export interface MainTitlePropsType extends GenericTitlePropsType {};
 
-export default function MainTitle({ children }: MainTitlePropsType) {
+export function MainTitle({ children, withMargin }: MainTitlePropsType) {
 	const MainTitleStyle = clsx([
 		'text-4xl font-extrabold',
-		'mx-2 my-1 p-1',
-		'text-base-900'
+		withMargin && 'mt-2 mb-4'
 	]);
 
 	return (

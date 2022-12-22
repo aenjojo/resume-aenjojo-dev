@@ -3,11 +3,10 @@ import { GenericTitlePropsType } from './GenericTitle';
 
 export interface SubSectionTitlePropsType extends GenericTitlePropsType {};
 
-export default function SubSectionTitle({ children }: SubSectionTitlePropsType) {
+export function SubSectionTitle({ children, withMargin }: SubSectionTitlePropsType) {
 	const SubSectionTitleStyle = clsx([
-		'text-xl font-semibold',
-		'mx-2 my-1 p-1',
-		'text-base-900',
+		'text-xl font-bold',
+		withMargin && 'mt-4 mb-2'
 	]);
 
 	return (

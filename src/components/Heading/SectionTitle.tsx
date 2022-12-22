@@ -3,11 +3,10 @@ import { GenericTitlePropsType } from './GenericTitle';
 
 export interface SectionTitlePropsType extends GenericTitlePropsType {};
 
-export default function SectionTitle({ children }: SectionTitlePropsType) {
+export function SectionTitle({ children, withMargin }: SectionTitlePropsType) {
 	const SectionTitleStyle = clsx([
-		'text-2xl font-bold',
-		'mx-2 my-1 p-1',
-		'text-base-900',
+		'text-2xl font-extrabold',
+		withMargin && 'mt-4 mb-4'
 	]);
 
 	return (

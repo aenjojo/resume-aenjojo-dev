@@ -1,15 +1,14 @@
-import type { ReactNode } from 'react';
 import clsx from 'clsx';
 
 export interface GenericTitlePropsType {
-	children: ReactNode | ReactNode[],
+	children: string,
+	withMargin?: boolean,
 };
 
-export default function GenericTitle({ children }: GenericTitlePropsType) {
+export function GenericTitle({ children, withMargin }: GenericTitlePropsType) {
 	const GenericTitleStyle = clsx([
-		'text-lg font-medium',
-		'mx-2 my-1 p-1',
-		'text-base-900',
+		'text-lg font-semibold',
+		withMargin && 'mt-4 mb-2',
 	]);
 
 	return (

@@ -2,25 +2,14 @@
     @apply
         inline-flex flex-nowrap items-center
         transition-all duration-200
-        cursor-pointer relative
-        decoration-2 underline-offset-2
+        cursor-pointer relative font-medium
+        underline decoration-2 underline-offset-[6px]
         
         text-primary-500
         hover:text-primary-600
         focus:text-primary-600 
         active:text-primary-700
         
+        hover:decoration-4 hover:underline-offset-[5px]
         focus:outline-2 focus:outline-primary-300
-
-        after:absolute after:bottom-0
-        after:w-0 after:hover:w-full after:h-0.5
-        after:transition-all after:duration-500
-        after:bg-gradient-to-r after:from-primary-500 after:to-secondary-500
-}
-
-.text {
-    @apply
-        hover:bg-primary-200 hover:bg-opacity-30
-        focus:bg-primary-200 focus:bg-opacity-30
-        active:bg-primary-300 active:bg-opacity-30
 }

@@ -7,7 +7,6 @@ export interface TextLinkPropsType extends BaseLinkPropsType {};
 export function TextLink({ href, value, openInNewTab, className }: TextLinkPropsType) {
 	const TextLinkStyle = clsx([
 		styles.base,
-		styles.text,
 		className,
 	]);
 

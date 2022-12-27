@@ -3,9 +3,24 @@
 @tailwind utilities;
 
 :root {
-	@apply font-sans bg-base-100
+	@apply font-sans bg-base-100;
+
+	/* scrollbar firefox */
+	scrollbar-width: thin;
+	scrollbar-color: rgb(213 220 227 / 1) rgb(102 121 255 / 1);
+}
+/* scrollbar chrome, edge, safari, opera */
+::-webkit-scrollbar {
+	@apply w-2 h-2 lg:w-3 lg:h-3
+}
+::-webkit-scrollbar-track {
+	@apply bg-base-200 rounded-lg
+}
+::-webkit-scrollbar-thumb {
+	@apply bg-primary-300 rounded-lg
 }
 
+/* paragraph */
 p {
 	@apply mt-2 mb-4
 }
@@ -25,38 +40,40 @@ li {
 code {
 	@apply
 		p-1 font-mono rounded
-		bg-base-300 bg-opacity-30
+		bg-base-200 bg-opacity-30
 		
-		only:bg-transparent only:p-0 
+		only:bg-transparent only:p-0
 }
 pre {
 	@apply
 		my-4 py-2 pr-2 pl-4
-		bg-base-300 bg-opacity-30
-		border-l-8 border-l-primary-500 rounded-lg 
-		overflow-x-auto
+		bg-base-200 bg-opacity-30
+		rounded-lg overflow-x-auto
 }
 
 /* blockquote */
 blockquote {
 	@apply
-		my-4 py-2 pr-2 pl-4
-		bg-base-300 bg-opacity-30
-		border border-base-300 rounded-lg
+		my-4 py-2 pr-2 pl-12 relative
+		bg-base-200 bg-opacity-30 rounded-lg
+		before:content-['"'] before:text-6xl before:absolute before:left-2 before:top-4
 }
 
 /* table */
 table {
-	@apply my-4 w-full border-collapse
+	@apply
+		my-4 mx-auto w-full max-w-fit
+		border-collapse whitespace-nowrap
+		overflow-x-auto block rounded-lg
 }
 tr {
 	@apply
 		odd:bg-base-200 odd:bg-opacity-30
-		even:bg-base-400 even:bg-opacity-30
+		even:bg-base-300 even:bg-opacity-30
 }
 th {
-	@apply text-center bg-primary-200 px-2 uppercase
+	@apply text-center bg-primary-400 text-base-100 px-4
 }
 td {
-	@apply px-2
+	@apply px-4
 }

@@ -25,7 +25,7 @@ export function Header() {
 	))
 
 	return (
-		<header className='bg-gradient-to-r from-primary-100 to-secondary-100 border-b border-b-primary-200'>
+		<header className='bg-gradient-to-r from-primary-100 to-secondary-100 border-b border-b-primary-200 sticky top-0 z-10'>
 			<section className='container mx-auto flex flex-row justify-between px-2 py-1'>
 				<Link href='/' className='flex flex-row justify-center items-center focus-visible:outline-offset-4 focus-visible:outline-primary-300'>
 					<div className='relative w-6 h-8 mr-2'>

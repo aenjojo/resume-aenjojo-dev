@@ -17,7 +17,6 @@ export function SectionTitle({ children, withId, withMargin }: SectionTitleProps
 			className={SectionTitleStyle}
 			id={id}
 		>
-			{children} {' '}
 			{withId && (
 				<TextLink
 					href={`#${id}`}
@@ -25,6 +24,8 @@ export function SectionTitle({ children, withId, withMargin }: SectionTitleProps
 					className='no-underline'
 				/>
 			)}
+			{' '}
+			{children}
 		</h2>
 	);
 };

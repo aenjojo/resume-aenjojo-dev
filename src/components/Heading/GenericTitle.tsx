@@ -20,7 +20,6 @@ export function GenericTitle({ children, withId, withMargin }: GenericTitleProps
 			className={GenericTitleStyle}
 			id={id}
 		>
-			{children} {' '}
 			{withId && (
 				<TextLink
 					href={`#${id}`}
@@ -28,6 +27,8 @@ export function GenericTitle({ children, withId, withMargin }: GenericTitleProps
 					className='no-underline'
 				/>
 			)}
+			{' '}
+			{children}
 		</h4>
 	);
 };

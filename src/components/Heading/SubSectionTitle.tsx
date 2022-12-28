@@ -17,7 +17,6 @@ export function SubSectionTitle({ children, withId, withMargin }: SubSectionTitl
 			className={SubSectionTitleStyle}
 			id={id}
 		>
-			{children} {' '}
 			{withId && (
 				<TextLink
 					href={`#${id}`}
@@ -25,6 +24,8 @@ export function SubSectionTitle({ children, withId, withMargin }: SubSectionTitl
 					className='no-underline'
 				/>
 			)}
+			{' '}
+			{children}
 		</h3>
 	);
 };

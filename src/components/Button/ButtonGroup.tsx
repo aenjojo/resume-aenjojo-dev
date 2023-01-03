@@ -8,7 +8,7 @@ export interface ButtonGroupPropsType {
 
 export function ButtonGroup({ children, direction }: ButtonGroupPropsType) {
 	const ButtonGroupStyle = clsx([
-		'flex gap-2',
+		'flex gap-2 justify-center items-center',
 		direction === 'column' ? 'flex-col' : 'flex-row',
 	]);
 

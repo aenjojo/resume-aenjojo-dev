@@ -18,7 +18,7 @@ export function PostCard({ id, title, date, description, tags }: PostCardPropsTy
 
 	return (
 		<CardContainer>
-			<section className='flex flex-col gap-4 p-4 h-48'>
+			<section className='flex flex-col gap-4 p-4 h-56'>
 				<div className='flex-grow'>
 					<Link
 						href={postPageUrl}
@@ -26,7 +26,7 @@ export function PostCard({ id, title, date, description, tags }: PostCardPropsTy
 					>
 						<GenericTitle>{title}</GenericTitle>
 					</Link>
-					<article>{description}</article>
+					<p>{description}</p>
 				</div>
 				<div className='flex flex-col gap-2'>
 					{tags && <div className='flex flex-row gap-2'>

@@ -6,21 +6,16 @@ import { Image } from '#components/Image';
 export const components = {
 	// heading
 	h1: ({ children }) => (
-		<MainTitle withId withMargin>
-			{children as string}
-		</MainTitle>
-	),
-	h2: ({ children }) => (
 		<SectionTitle withId withMargin>
 			{children as string}
 		</SectionTitle>
 	),
-	h3: ({ children }) => (
+	h2: ({ children }) => (
 		<SubSectionTitle withId withMargin>
 			{children as string}
 		</SubSectionTitle>
 	),
-	h4: ({ children }) => (
+	h3: ({ children }) => (
 		<GenericTitle withId withMargin>
 			{children as string}
 		</GenericTitle>

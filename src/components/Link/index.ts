@@ -1,3 +1,3 @@
-export { BaseLink, type BaseLinkPropsType } from './BaseLink';
-export { ButtonLink, type ButtonLinkPropsType } from './ButtonLink';
-export { TextLink, type TextLinkPropsType } from './TextLink';
+export * from './BaseLink';
+export * from './ButtonLink';
+export * from './TextLink';

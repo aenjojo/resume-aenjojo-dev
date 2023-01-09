@@ -35,7 +35,7 @@ export function Footer() {
 	));
 
 	return (
-		<footer className='bg-gradient-to-r from-primary-100 to-secondary-100 border-t border-t-primary-200'>
+		<footer className='bg-primary-100 border-t border-t-primary-200'>
 			<section className='mx-auto flex gap-2 flex-col px-2 py-4 items-center'>
 				<div>
 					<div className='flex flex-row justify-center items-center'>

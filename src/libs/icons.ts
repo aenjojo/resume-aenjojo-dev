@@ -1,10 +1,10 @@
-import { TechIcon, type TechIconType } from '#constants/TechIcon';
+import { techIcons, type techIconsType } from '#constants/techIcons';
 
 export function getTechIcon(iconNames: string[]) {
-	const iconFound: TechIconType = [];
+	const iconFound: techIconsType[] = [];
 
 	for (const iconName of iconNames) {
-		const result = TechIcon.find(tech => tech.name.toLowerCase() === iconName.toLowerCase());
+		const result = techIcons.find(tech => tech.id === iconName.toLowerCase());
 
 		if (!result) continue;
 

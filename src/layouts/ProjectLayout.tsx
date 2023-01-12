@@ -24,8 +24,8 @@ export function ProjectLayout({ children, metadata }: ProjectLayoutType) {
 		<MainLayout display='grid'>
 			<section className='col-span-full'>
 				<ButtonLink
-					href='/blog'
-					value='Back to blog'
+					href='/projects'
+					value='Back to project'
 					variant='empty'
 					icon={<MdChevronLeft size='20' />}
 				/>

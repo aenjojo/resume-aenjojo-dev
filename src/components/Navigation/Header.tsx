@@ -1,6 +1,5 @@
 import { Button } from '#components/Button';
 import { ButtonLink } from '#components/Link';
-import { DisplayText } from '#components/Text';
 import { MdOutlineMenu, MdOutlineClose } from 'react-icons/md';
 import { useState } from 'react';
 import clsx from 'clsx';
@@ -28,16 +27,12 @@ export function Header() {
 		<header className='bg-primary-100 border-b border-b-primary-200 sticky top-0 z-10'>
 			<section className='container mx-auto flex flex-row justify-between px-2 py-1'>
 				<Link href='/' className='flex flex-row justify-center items-center focus-visible:outline-offset-4 focus-visible:outline-primary-300'>
-					<div className='relative w-6 h-8 mr-2'>
-						<Image alt='' src='/AenJojo - Transparent.png' fill={true} className='object-contain' sizes='25vw' />
-					</div>
-					<DisplayText value='Aen' size='XXL' className='text-center text-secondary-500 inline-block' />
-					<DisplayText value='Jojo' size='XXL' className='text-center text-primary-500 inline-block' />
+					<Image alt='' src='/images/logo/AenJojo - Full Colored.svg' width={144} height={32} />
 				</Link>
-				<nav className='hidden lg:flex lg:flex-row lg:gap-2'>
+				<nav className='hidden lg:flex lg:flex-row lg:gap-2 items-center justify-center'>
 					{NavigationList}
 				</nav>
-				<section className='flex lg:hidden'>
+				<section className='flex lg:hidden items-center justify-center'>
 					<Button
 						value='Menu'
 						icon={isOpen

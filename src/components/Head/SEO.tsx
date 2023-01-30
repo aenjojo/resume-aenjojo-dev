@@ -6,7 +6,7 @@ export interface SEOPropsType {
 	description: string,
 	keywords: string[],
 	pathUrl: string,
-	thumbnail: string,
+	thumbnail?: string,
 	isArticle?: boolean,
 }
 
@@ -18,7 +18,7 @@ export function SEO({ title, description, keywords, pathUrl, thumbnail, isArticl
 
 	return (
 		<Head>
-			<title>{title} | {siteName}</title>
+			<title>{`${title} | ${siteName}`}</title>
 
 			<meta charSet='UTF-8' />
 			<meta name='viewport' content='width=device-width, initial-scale=1.0' />
@@ -39,7 +39,7 @@ export function SEO({ title, description, keywords, pathUrl, thumbnail, isArticl
 			<meta property='twitter:title' content={title} />
 			<meta property='twitter:description' content={description} />
 			<meta property='twitter:url' content={pageUrl} />
-			{thumbnail !== '' && <meta property='twitter:image' content={pageImage} />}
+			<meta property='twitter:image' content={pageImage} />
 
 			<link rel='icon' type='image/png' href='/favicon.png' />
 			<link rel='canonical' href={pageUrl} />

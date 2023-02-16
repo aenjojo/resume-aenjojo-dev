@@ -11,7 +11,7 @@ interface MainLayoutType {
 
 export function MainLayout({ children, display, seo }: MainLayoutType) {
 	const MainLayoutStyle = clsx([
-		'container mx-auto pt-4 pb-10 px-4 lg:px-40',
+		'container mx-auto pt-4 pb-10 px-4 lg:px-20 xl:px-40',
 		display === 'grid' ? 'grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-4' : '',
 	]);
 

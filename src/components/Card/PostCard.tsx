@@ -26,7 +26,7 @@ export function PostCard({ id, title, date, description, tags }: PostCardPropsTy
 					>
 						<GenericTitle>{title}</GenericTitle>
 					</Link>
-					<p>{description}</p>
+					<p className='line-clamp-3'>{description}</p>
 				</div>
 				<div className='flex flex-col gap-2'>
 					{tags && <div className='flex flex-row gap-2'>

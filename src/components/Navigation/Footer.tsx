@@ -3,6 +3,7 @@ import { DisplayText } from '#components/Text';
 import { ButtonGroup } from '#components/Button';
 import { FaInstagram, FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
 import Image from 'next/image';
+import Logo from '#public/images/logo/aenjojo-full-color.svg';
 
 export function Footer() {
 	const SocialMediaList = [
@@ -39,7 +40,7 @@ export function Footer() {
 		<footer className='bg-primary-100 border-t border-t-primary-200'>
 			<section className='mx-auto flex gap-2 flex-col px-2 py-4 items-center'>
 				<div>
-					<Image alt='' src='/images/logo/AenJojo - Full Colored.svg' width={144} height={32} />
+					<Image alt='' src={Logo} className='w-28 stroke-primary-500' />
 					<DisplayText value='aenjojo © 2022' size='S' className='text-center' />
 				</div>
 				<ButtonGroup direction='row'>

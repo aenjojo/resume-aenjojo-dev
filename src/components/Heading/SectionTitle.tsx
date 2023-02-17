@@ -7,7 +7,8 @@ export interface SectionTitlePropsType extends GenericTitlePropsType {};
 export function SectionTitle({ children, withId, withMargin }: SectionTitlePropsType) {
 	const SectionTitleStyle = clsx([
 		'text-2xl font-extrabold',
-		withMargin && 'mt-4 mb-4'
+		withMargin && 'mb-4',
+		withId && 'group',
 	]);
 
 	const id = withId ? encodeURIComponent(children.toLowerCase().replaceAll(/ +/g, '-')) : '';
@@ -17,15 +18,15 @@ export function SectionTitle({ children, withId, withMargin }: SectionTitleProps
 			className={SectionTitleStyle}
 			id={id}
 		>
+			{children}
+			{' '}
 			{withId && (
 				<TextLink
 					href={`#${id}`}
 					value='#'
-					className='no-underline'
+					className='no-underline invisible group-hover:visible'
 				/>
 			)}
-			{' '}
-			{children}
 		</h2>
 	);
 };

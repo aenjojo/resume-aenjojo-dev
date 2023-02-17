@@ -7,7 +7,8 @@ export interface SubSectionTitlePropsType extends GenericTitlePropsType {};
 export function SubSectionTitle({ children, withId, withMargin }: SubSectionTitlePropsType) {
 	const SubSectionTitleStyle = clsx([
 		'text-xl font-bold',
-		withMargin && 'mt-4 mb-2'
+		withMargin && 'mb-2',
+		withId && 'group',
 	]);
 
 	const id = withId ? encodeURIComponent(children.toLowerCase().replaceAll(/ +/g, '-')) : '';
@@ -17,15 +18,15 @@ export function SubSectionTitle({ children, withId, withMargin }: SubSectionTitl
 			className={SubSectionTitleStyle}
 			id={id}
 		>
+			{children}
+			{' '}
 			{withId && (
 				<TextLink
 					href={`#${id}`}
 					value='#'
-					className='no-underline'
+					className='no-underline invisible group-hover:visible'
 				/>
 			)}
-			{' '}
-			{children}
 		</h3>
 	);
 };

@@ -10,7 +10,8 @@ export interface GenericTitlePropsType {
 export function GenericTitle({ children, withId, withMargin }: GenericTitlePropsType) {
 	const GenericTitleStyle = clsx([
 		'text-lg font-semibold',
-		withMargin && 'mt-4 mb-2',
+		withMargin && 'mb-2',
+		withId && 'group',
 	]);
 
 	const id = withId ? encodeURIComponent(children.toLowerCase().replaceAll(/ +/g, '-')) : '';
@@ -20,15 +21,15 @@ export function GenericTitle({ children, withId, withMargin }: GenericTitleProps
 			className={GenericTitleStyle}
 			id={id}
 		>
+			{children}
+			{' '}
 			{withId && (
 				<TextLink
 					href={`#${id}`}
 					value='#'
-					className='no-underline'
+					className='no-underline invisible group-hover:visible'
 				/>
 			)}
-			{' '}
-			{children}
 		</h4>
 	);
 };

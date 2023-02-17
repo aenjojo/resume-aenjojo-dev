@@ -7,15 +7,17 @@ import { MdOutlineCode, MdOutlinePublic } from 'react-icons/md';
 import styles from '#styles/Link.module.css';
 
 export interface PortfolioCardPropsType {
+	id: string,
 	title: string,
+	type: 'web' | 'non-web',
 	description: string,
 	imageSource: string,
 	demoUrl?: string,
 	codeUrl?: string,
 }
 
-export function PortfolioCard({ title, description, imageSource, demoUrl, codeUrl }: PortfolioCardPropsType) {
-	const projectPageUrl = `/projects/${title.toLowerCase().replaceAll(' ', '-')}`;
+export function PortfolioCard({ id, title, type, description, imageSource, demoUrl, codeUrl }: PortfolioCardPropsType) {
+	const projectPageUrl = `/projects/${type}/${id}`;
 
 	return (
 		<CardContainer>
@@ -37,7 +39,7 @@ export function PortfolioCard({ title, description, imageSource, demoUrl, codeUr
 					>
 						<GenericTitle>{title}</GenericTitle>
 					</Link>
-					<p>{description}</p>
+					<p className='line-clamp-3'>{description}</p>
 				</div>
 				<div className='flex flex-row gap-2 justify-end'>
 					{codeUrl && <ButtonLink

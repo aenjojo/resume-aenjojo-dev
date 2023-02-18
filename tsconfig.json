@@ -21,7 +21,8 @@
       "#layouts/*": ["./src/layouts/*"],
       "#libs/*": ["./src/libs/*"],
       "#services/*": ["./src/services/*"],
-      "#styles/*": ["./src/styles/*"]
+      "#styles/*": ["./src/styles/*"],
+      "#public/*": ["./public/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

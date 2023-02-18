@@ -3,6 +3,9 @@ import {
 	SiTailwindcss,
 	SiSvelte,
 	SiVite,
+	SiDiscord,
+	SiTypescript,
+	SiJavascript,
 } from 'react-icons/si';
 
 export type techIconsType = {
@@ -30,5 +33,17 @@ export const techIcons: techIconsType[] = [{
 }, {
 	id: 'vite',
 	name: 'Vite',
-	icon: <SiVite size='24' title='Vite.js' fill='#646cff' />
+	icon: <SiVite size='24' title='Vite.js' fill='#646cff' />,
+}, {
+	id: 'discord.js',
+	name: 'Discord JS',
+	icon: <SiDiscord size='24' title='Discord.js' fill='#5865f2' />,
+}, {
+	id: 'js',
+	name: 'Javascript',
+	icon: <SiJavascript size='24' title='Javascript' fill='#f7df1e' />,
+}, {
+	id: 'ts',
+	name: 'Typescript',
+	icon: <SiTypescript size='24' title='Typescript' fill='#3178c6' />,
 }];

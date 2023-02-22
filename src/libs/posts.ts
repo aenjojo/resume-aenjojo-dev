@@ -4,6 +4,7 @@ import { resolve } from 'node:path';
 export interface metaDataType {
 	title: string,
 	excerpt: string,
+	fullDate: string,
 	date: string,
 	tags: string[],
 }

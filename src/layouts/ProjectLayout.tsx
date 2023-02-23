@@ -3,8 +3,10 @@ import type { ReactNode } from 'react';
 import { MainLayout } from './MainLayout';
 import { MainTitle, SectionTitle } from '#components/Heading';
 import { ButtonLink } from '#components/Link';
+import { Breadcrumb } from '#components/Navigation';
 import { getTechIcon } from '#libs/icons';
-import { MdChevronLeft } from 'react-icons/md';
+import { useRouter } from 'next/router';
+import { MdOutlineCode, MdOutlinePublic } from 'react-icons/md';
 
 interface ProjectLayoutType {
 	children: ReactNode | ReactNode[],
@@ -18,40 +20,71 @@ interface ProjectLayoutType {
 }
 
 export function ProjectLayout({ children, metadata }: ProjectLayoutType) {
+	const { pathname } = useRouter();
+
+	const pathnameArray = pathname.split('/');
+	const breadcrumbPaths = [{
+		href: '/',
+		text: 'Home',
+	}, {
+		href: `/${pathnameArray[1]}`,
+		text: 'Projects',
+	}];
 	const techStacks = getTechIcon(metadata.techStack);
 
 	return (
-		<MainLayout display='grid'>
+		<MainLayout
+			display='grid'
+			seo={{
+				title: metadata.title,
+				description: '',
+				keywords: [''],
+				pathUrl: pathname,
+				isArticle: true,
+				thumbnail: metadata.image,
+			}}
+		>
 			<section className='col-span-full'>
-				<ButtonLink
-					href='/projects'
-					value='Back to project'
-					variant='empty'
-					icon={<MdChevronLeft size='20' />}
+				<Breadcrumb
+					paths={breadcrumbPaths}
+					current={metadata.title}
 				/>
 			</section>
+
 			<section className='col-span-full'>
 				<div className='h-64 lg:h-96 relative'>
 					<Image
 						src={metadata.image}
 						alt=''
 						fill={true}
-						className='object-cover'
-						priority={false}
-						sizes='100vw'
+						className='object-cover object-top'
+						sizes='(min-width: 1024px) 75vw, 100vw'
 					/>
 				</div>
 			</section>
+
 			<section className='col-span-full text-center py-4 px-0 lg:p-10'>
 				<MainTitle>{metadata.title}</MainTitle>
 				<div className='my-2 flex flex-row gap-4 items-center justify-center'>
-					{metadata.demoUrl && <ButtonLink href={metadata.demoUrl} value='Demo' variant='fill' />}
-					{metadata.codeUrl && <ButtonLink href={metadata.codeUrl} value='Code' variant='outline' />}
+					{metadata.demoUrl && <ButtonLink
+						value='Demo'
+						href={metadata.demoUrl}
+						variant='fill'
+						icon={<MdOutlinePublic size={20} />}
+					/>}
+					{metadata.codeUrl && <ButtonLink
+						value='Code'
+						href={metadata.codeUrl}
+						variant='outline'
+						icon={<MdOutlineCode size={20} />}
+					/>}
 				</div>
 			</section>
-			<article className='col-span-full lg:col-span-9'>
+
+			<article className='main-content col-span-full lg:col-span-9'>
 				{children}
 			</article>
+			
 			<aside className='col-span-full lg:col-span-3'>
 				<SectionTitle>Tech Stack</SectionTitle>
 				<div className='flex flex-col flex-nowrap lg:items-center gap-2 mt-4'>

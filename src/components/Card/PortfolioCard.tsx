@@ -26,7 +26,7 @@ export function PortfolioCard({ id, title, type, description, imageSource, demoU
 					src={imageSource}
 					alt=''
 					fill={true}
-					className='object-cover'
+					className='object-cover object-top'
 					priority={false}
 					sizes='(min-width: 1536px) 25vw, (min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw'
 				/>

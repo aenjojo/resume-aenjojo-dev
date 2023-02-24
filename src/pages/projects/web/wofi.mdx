@@ -1,0 +1,38 @@
+import { DisplayText } from '#components/Text';
+import { ProjectLayout } from '#layouts/ProjectLayout';
+
+export const meta = {
+	title: 'Wofi',
+	description: 'A simple word finding website built with Svelte',
+	fullDate: '22 January 2023',
+	date: '2023-01-22',
+	image: '/images/projects/wofi.png',
+	techStack: ['svelte', 'sveltekit', 'tailwind'],
+	codeUrl: 'https://github.com/aenjojo/word-finder',
+	demoUrl: 'https://wofi.vercel.app/',
+};
+
+# Introduction
+**Wofi**, abbreviation of "**Wo**rd **Fi**nding", is a website I created to find related word to my search.
+This website is my first time of creating a Svelte website and my first time learning Svelte.
+
+The website uses [datamuse](https://datamuse.com) API, an API to search related word.
+The API itself is hard to use, if used by manually writing the query into the browser.
+So, I build this website, just to find a related word from their API.
+
+Previously, I implement this API on my discord bot, [Natsuki](/projects/non-web/natsuki-bot).
+But, since my discord bot is offline for rewriting into Discord.js v14, I can't use it.
+
+export default ({ children }) => (
+	<ProjectLayout
+		metadata={{
+			title: meta.title,
+			image: meta.image,
+			techStack: meta.techStack,
+			codeUrl: meta.codeUrl,
+			demoUrl: meta.demoUrl,
+		}}
+	>
+		{children}
+	</ProjectLayout>
+);

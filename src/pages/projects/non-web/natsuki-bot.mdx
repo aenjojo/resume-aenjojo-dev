@@ -1,0 +1,38 @@
+import { DisplayText } from '#components/Text';
+import { ProjectLayout } from '#layouts/ProjectLayout';
+
+export const meta = {
+	title: 'Natsuki Bot',
+	description: 'A general purpose discord bot built with discord.js since 2018',
+	date: '30 June 2018',
+	image: '/images/projects/nexbot.png',
+	techStack: ['discord.js', 'ts', 'js'],
+	codeUrl: 'https://github.com/nexbot-dev/natsuki',
+};
+
+# Introduction
+**Natsuki Bot** is a discord bot I developed since 2018.
+Natsuki Bot is a multi-purpose discord bot, but mostly focused on fun thingy.
+Her username in discord is **Natsuki#0492**.
+
+# History
+It's name comes from a girl named Natsuki in Doki Doki Literature Club, a visual novel game created by Team Salvato.
+I like Natsuki, because she is so cute with the pink hair.
+
+I built it out of curiosity on bot development in discord, especially after some of my friends from SoloLearn also built their own bot.
+It was my first time of using node.js, so the environment is a bit different from web development.
+That's why when developing it, I always read a guide instead of documentation.
+
+export default ({ children }) => (
+	<ProjectLayout
+		metadata={{
+			title: meta.title,
+			image: meta.image,
+			techStack: meta.techStack,
+			codeUrl: meta.codeUrl,
+			demoUrl: meta.demoUrl,
+		}}
+	>
+		{children}
+	</ProjectLayout>
+);

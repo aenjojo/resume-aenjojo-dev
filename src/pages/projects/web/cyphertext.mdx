@@ -1,0 +1,37 @@
+import { DisplayText } from '#components/Text';
+import { ProjectLayout } from '#layouts/ProjectLayout';
+
+export const meta = {
+	title: 'CypherText',
+	description: 'A classic cryptography cipher website built with Next.js',
+	fullDate: '21 February 2023',
+	date: '2023-02-21',
+	image: '/images/projects/cyphertext.png',
+	techStack: ['nextjs', 'tailwind'],
+	codeUrl: 'https://github.com/aenjojo/cyphertext-app',
+	demoUrl: 'https://cyphertext.vercel.app/',
+};
+
+# Introduction
+**CypherText** is a simple website I build to cipher a message. I created to make me easier when I need to cipher a message.
+The cipher itself is a classic cipher I ever learned during my second year at the college.
+
+At first, I just create an implementation of the cipher in JavaScript in [SoloLearn](https://www.sololearn.com), based on my knowledge on the cipher.
+But, I found it a bit hard when it comes to cipher a message. Also, since I need to create some portfolio, I decided to built this website.
+
+I also implement an API, just in case somebody wants to use the function from their apps.
+The documentation can be found at website.
+
+export default ({ children }) => (
+	<ProjectLayout
+		metadata={{
+			title: meta.title,
+			image: meta.image,
+			techStack: meta.techStack,
+			codeUrl: meta.codeUrl,
+			demoUrl: meta.demoUrl,
+		}}
+	>
+		{children}
+	</ProjectLayout>
+);

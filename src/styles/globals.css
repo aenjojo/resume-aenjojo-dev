@@ -22,7 +22,7 @@
 
 /* paragraph */
 .main-content p {
-	@apply mb-2
+	@apply mb-4
 }
 
 /* list */

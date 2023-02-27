@@ -8,6 +8,7 @@ export const meta = {
 	date: '2023-01-22',
 	image: '/images/projects/wofi.png',
 	techStack: ['svelte', 'sveltekit', 'tailwind'],
+	keywords: ['wofi', 'word finding website', 'svelte', 'tailwind css'],
 	codeUrl: 'https://github.com/aenjojo/word-finder',
 	demoUrl: 'https://wofi.vercel.app/',
 };
@@ -27,6 +28,8 @@ export default ({ children }) => (
 	<ProjectLayout
 		metadata={{
 			title: meta.title,
+			description: meta.description,
+			keywords: meta.keywords,
 			image: meta.image,
 			techStack: meta.techStack,
 			codeUrl: meta.codeUrl,

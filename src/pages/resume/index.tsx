@@ -61,9 +61,9 @@ export default function ResumePage() {
 				<SectionTitle>About Me</SectionTitle>
 				<article className='main-content'>
 					<p>
-						I am Josua Fernando Simanjuntak, a fresh graduate from STIKOM Tunas Bangsa with bachelor degree.
-						Skilled in developing website with a strong background in web design, user experience, and responsive web development.
-						Passioned to create a high-quality website that focused on good accessibility and performance.
+						I am Josua Fernando Simanjuntak, a fresh graduate from STIKOM Tunas Bangsa with bachelor&apos;s degree.
+						Skilled in developing websites with a strong background in web design, user experience, and responsive web development.
+						Passionate to create a high-quality website that focused on good accessibility and performance.
 					</p>
 				</article>
 			</section>

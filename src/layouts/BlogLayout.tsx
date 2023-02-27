@@ -17,8 +17,8 @@ interface BlogLayoutType {
 	children: ReactNode | ReactNode[],
 	metadata: {
 		title: string,
-		description: '',
-		keywords: [''],
+		description: string,
+		keywords: string[],
 		date: string,
 		image?: string,
 		tags?: string[],

@@ -12,6 +12,8 @@ interface ProjectLayoutType {
 	children: ReactNode | ReactNode[],
 	metadata: {
 		title: string,
+		description: string,
+		keywords: string[],
 		image: string,
 		techStack: string[],
 		codeUrl?: string,
@@ -37,8 +39,8 @@ export function ProjectLayout({ children, metadata }: ProjectLayoutType) {
 			display='grid'
 			seo={{
 				title: metadata.title,
-				description: '',
-				keywords: [''],
+				description: metadata.description,
+				keywords: metadata.keywords,
 				pathUrl: pathname,
 				isArticle: true,
 				thumbnail: metadata.image,

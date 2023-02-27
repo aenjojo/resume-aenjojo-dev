@@ -4,9 +4,11 @@ import { ProjectLayout } from '#layouts/ProjectLayout';
 export const meta = {
 	title: 'Natsuki Bot',
 	description: 'A general purpose discord bot built with discord.js since 2018',
-	date: '30 June 2018',
+	fullDate: '29 June 2018',
+	date: '2018-06-29',
 	image: '/images/projects/nexbot.png',
 	techStack: ['discord.js', 'ts', 'js'],
+	keywords: ['discord bot', 'discord.js', 'nexbot', 'natsuki bot'],
 	codeUrl: 'https://github.com/nexbot-dev/natsuki',
 };
 
@@ -27,6 +29,8 @@ export default ({ children }) => (
 	<ProjectLayout
 		metadata={{
 			title: meta.title,
+			description: meta.description,
+			keywords: meta.keywords,
 			image: meta.image,
 			techStack: meta.techStack,
 			codeUrl: meta.codeUrl,

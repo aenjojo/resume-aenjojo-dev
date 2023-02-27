@@ -1,0 +1,150 @@
+import { BlogLayout } from '#layouts/BlogLayout';
+import { Alert } from '#components/Alert';
+
+export const meta = {
+	title: 'My MDX Page',
+	excerpt: 'I created blog with MDX, so I can focus on creating the content while still manage the layout and style of the page without touching any technical stuff',
+	fullDate: '26 February 2023',
+	date: '2023-02-26',
+	keywords: ['mdx', 'mdxjs', 'how to use mdx', 'react markdown'],
+	image: '',
+	tags: ['html', 'mdx', 'react.js'],
+};
+
+# Introduction
+Hello, I am Josua here. I was creating my own MDX based blog, which is a cool way to create blog post,
+because I can focus on creating the content while still manage the layout and style of the page without
+touching any technical stuff, like HTML tags or React Components. Well, actually I still need to use
+React Component here, and that is the reason why I implement MDX instead of conventional Markdown.
+
+By the way, talking about MDX, I will tell you more about MDX file.
+
+# What is MDX?
+MDX or React Markdown, is a superset of markdown, which make use of react components inside a normal markdown.
+The term of MDX itself comes after React file use the extension with a pattern of appending a letter X after
+the normal languange extension, such as `.js` to `.jsx` for Javascript and `.ts` to `.tsx` for Typescript.
+
+Writing content in markdown actually is enough. But, some peoples find out that the components they were created
+for other page are unused, because there is no way to use it in a markdown file. This is why MDX comes in handy to solve
+that problem. Because, we now can use the component directly, just like in a normal `.jsx` file.
+
+Another advantage of MDX is you can define a variable like in Javascript, and use it by wrapping the variable
+between `{` and `}`, just like how you normally use variable inside JSX. For example:
+
+```js
+const name = "MDX";
+
+I use **{name}** because I found {name} is so good.
+// Result: I use MDX because I found MDX is so good.
+```
+
+<Alert type='danger'>
+	MDX is considered a programming languange by the official documentation. So, be careful if you are going to
+	let your user to type in MDX, since MDX can evaluate the code like a normal Javascript file.
+</Alert>
+
+# Install MDX and Start Using It
+If you are using React, you don't need to install anything, as it already supported out of the box.
+Optionally, you can install `@mdx-js/react` if you want to use MDX Component (I will tell about it next the section).
+
+```js
+npm install @mdx-js/react
+
+// if you use yarn
+yarn add @mdx-js/react
+```
+
+For other framework, you can refer to their [official documentation](https://mdxjs.com/docs/getting-started/).
+
+<Alert type='warning'>
+	To use MDX, you need to use ESM and Node.js v12 or above in your project. It is because MDX is ESM-only.
+</Alert>
+
+# MDX Component
+MDX also offers a nice way to use your react component, called MDX Component. It is a way to convert the HTML tag
+result of the converted markdown to your react component.
+
+For example, let's say you have a Link component. Now, when you want to use it in your MDX file, you would like
+to import it and use it like this example below.
+
+```js
+// link.js
+export const link = ({ href, children }) => (
+	<a href={href} className="no-underline text-red-500" target="_blank">
+		{children}
+	</a>
+)
+
+// index.js
+import Link from 'components/link.js';
+
+<Link href="example.com">A clickable link</Link>
+```
+
+Of course, it is already nice. But, it is also a bit exhausting if you need to write that every time you need to make
+a link. Although it was one of the use of MDX, but why did you want to do that, when there is an easy way to solve it?
+
+<Alert type='info'>
+	It is more preferable to use react component directly for some component, since markdown only support default
+	text formatting to HTML tag, like `**...**` to `<strong>..</strong>`. It doesn't have a way to write a progress bar
+	or an input field, for example.
+</Alert>
+
+This is what the use MDX Component. You can just tell the MDX to use that react component every time they encounter
+a markdown link like below.
+
+```js
+[a text](example.com)
+
+// then it is converted by mdx to use your react component
+<Link href="example.com">a text</Link>
+
+// and then, react render it as plain HTML
+```
+
+To use it, first you need a `.jsx` or `.tsx` file where you import the components you want.
+You also can do it inside your main app file. There, you create an object that contain
+the tag name as key and a function to use the react component as value. It should like this.
+
+```js
+import Link from 'component/link.js';
+
+export const myMDXComponent = {
+	a: ({ href, children }) => (
+		<Link href={href}>{children}</Link>
+	),
+	// you can add other component too
+}
+```
+
+Then, you need to add and wrap your main app with `<MDXProvider>` tag inside your `app.js` or `app.ts`.
+Here, I use the example in next.js. But, it is still pretty similar to normal react.
+
+```js
+export const App = ({ Component, props }) => (
+	<MDXProvider components={myMDXComponent}>
+		<Component {...props} />
+	</MDXProvider>
+)
+```
+
+And then you can start writing your markdown without needing to import those basic text formatting component.
+
+# Conclusion
+It is some advantages of using MDX inside your JSX based projects. It offers a convenient way to enhance your markdown.
+Don't forget to check [their documentation](https://mdxjs.com/docs/what-is-mdx/) for deeper explanation and more example.
+
+export default ({ children }) => (
+	<BlogLayout
+		metadata={{
+			title: meta.title,
+			description: meta.excerpt,
+			keywords: meta.keywords,
+			date: meta.fullDate,
+			image: meta.image,
+			tags: meta.tags,
+		}}
+	>
+		{children}
+	</BlogLayout>
+);

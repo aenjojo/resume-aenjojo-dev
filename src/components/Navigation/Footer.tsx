@@ -37,7 +37,7 @@ const SocialMediaList = [
 
 export function Footer() {
 	return (
-		<footer className='bg-primary-100 border-t border-t-primary-200'>
+		<footer className='bg-primary-50 border-t border-t-primary-100'>
 			<section className='mx-auto flex gap-2 flex-col px-2 py-4 items-center'>
 				<div>
 					<Image

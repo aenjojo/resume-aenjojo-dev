@@ -31,7 +31,7 @@ export function Header() {
 	}, [isOpen]);
 
 	return (
-		<header className='bg-primary-100 border-b border-b-primary-200 sticky top-0 z-10'>
+		<header className='bg-primary-50 border-b border-b-primary-100 sticky top-0 z-10'>
 			<section className='container mx-auto flex flex-row justify-between px-2 py-1'>
 				<Link
 					href='/'
@@ -61,7 +61,7 @@ export function Header() {
 			</section>
 			<nav
 				className={clsx([
-					'lg:hidden w-full bg-primary-100 transition-all duration-300 absolute',
+					'lg:hidden w-full bg-primary-50 transition-all duration-300 absolute',
 					isOpen ? 'h-screen' : 'h-0 invisible opacity-0'
 				])}
 			>

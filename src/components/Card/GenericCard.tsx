@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { CardContainer } from './CardContainer';
-import { GenericTitle } from '#components/Heading';
+import { SubSectionTitle } from '#components/Heading';
 
 export interface GenericCardPropsType {
 	title: string,
@@ -18,7 +18,7 @@ export function GenericCard({ title, description, icon }: GenericCardPropsType) 
 					</div>
 				)}
 				<div>
-					<GenericTitle>{title}</GenericTitle>
+					<SubSectionTitle>{title}</SubSectionTitle>
 					<p>{description}</p>
 				</div>
 			</section>

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { CardContainer } from './CardContainer';
-import { GenericTitle } from '#components/Heading';
+import { SubSectionTitle } from '#components/Heading';
 import { ButtonLink } from '#components/Link';
 import { MdOutlineCode, MdOutlinePublic } from 'react-icons/md';
 import styles from '#styles/Link.module.css';
@@ -36,7 +36,7 @@ export function PortfolioCard({ id, title, type, description, imageSource, demoU
 						href={projectPageUrl}
 						className={styles.base}
 					>
-						<GenericTitle>{title}</GenericTitle>
+						<SubSectionTitle>{title}</SubSectionTitle>
 					</Link>
 					<p className='line-clamp-3'>{description}</p>
 				</div>

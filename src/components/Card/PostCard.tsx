@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { CardContainer } from './CardContainer';
-import { GenericTitle } from '#components/Heading';
+import { SubSectionTitle } from '#components/Heading';
 import { Chip } from '#components/Chip';
 import { DisplayText } from '#components/Text';
 import styles from '#styles/Link.module.css';
@@ -24,7 +24,7 @@ export function PostCard({ id, title, date, description, tags }: PostCardPropsTy
 						href={postPageUrl}
 						className={styles.base}
 					>
-						<GenericTitle>{title}</GenericTitle>
+						<SubSectionTitle>{title}</SubSectionTitle>
 					</Link>
 					<p className='line-clamp-3'>{description}</p>
 				</div>

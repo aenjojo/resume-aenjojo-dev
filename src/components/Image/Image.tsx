@@ -14,7 +14,6 @@ export function Image({ src, alt, decorationOnly }: ImagePropsType) {
 				alt={decorationOnly ? '' : alt}
 				fill={true}
 				className='object-contain'
-				priority={false}
 				sizes='(min-width: 1536px) 25vw, (min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw'
 			/>
 		</span>

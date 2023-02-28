@@ -78,6 +78,7 @@ export function BlogLayout({ children, metadata, articles }: BlogLayoutType) {
 							fill={true}
 							className='object-cover object-top'
 							sizes='(min-width: 1024px) 75vw, 100vw'
+							priority
 						/>
 					</div>
 				</section>

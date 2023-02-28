@@ -61,6 +61,7 @@ export function ProjectLayout({ children, metadata }: ProjectLayoutType) {
 						fill={true}
 						className='object-cover object-top'
 						sizes='(min-width: 1024px) 75vw, 100vw'
+						priority
 					/>
 				</div>
 			</section>

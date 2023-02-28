@@ -16,7 +16,7 @@ const SocialMediaList = [
 		icon: <FaTwitter size={24} />
 	},{
 		name: 'LinkedIn',
-		link: 'https://www.linkedin.com/aenjojo',
+		link: 'https://www.linkedin.com/in/aenjojo',
 		icon: <FaLinkedin size={24} />
 	},{
 		name: 'GitHub',

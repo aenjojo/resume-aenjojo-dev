@@ -27,8 +27,7 @@ export function PortfolioCard({ id, title, type, description, imageSource, demoU
 					alt=''
 					fill={true}
 					className='object-cover object-top'
-					priority={false}
-					sizes='(min-width: 1536px) 25vw, (min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw'
+					sizes='(min-width: 1536px) 15vw, (min-width: 1024px) 25vw, (min-width: 768px) 50vw, 75vw'
 				/>
 			</section>
 			<section className='flex flex-col gap-4 p-4 border-t border-primary-200 h-48'>

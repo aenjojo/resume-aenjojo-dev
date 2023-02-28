@@ -8,6 +8,7 @@ import { SEO } from '#components/Head';
 import { getProjects, type metaDataType as projectMeta } from '#libs/projects';
 import { getPosts, type metaDataType as postMeta } from '#libs/posts';
 import { sortContent } from '#libs/sortContent';
+import ShowcaseImage from '#public/images/showcase.png';
 
 interface HomePropsType {
 	latestProjects: {
@@ -57,13 +58,13 @@ export default function HomePage({ latestProjects, latestPosts }: HomePropsType)
 								/>
 							</div>
 						</div>
-						<div className='w-2/5 lg:w-1/2 flex justify-center items-center'>
+						<div className='w-1/2 flex justify-center items-center'>
 							<Image
 								alt=''
-								src='/images/laptop-2298286_1280.png'
-								width={1280}
-								height={1070}
+								src={ShowcaseImage}
 								className='w-full'
+								sizes='(min-width: 1024px) 40vw, 50vw'
+								priority
 							/>
 						</div>
 					</section>

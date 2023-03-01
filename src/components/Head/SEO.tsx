@@ -22,7 +22,7 @@ export function SEO({ title, description, keywords, pathUrl, thumbnail, isArticl
 
 			<meta charSet='UTF-8' />
 			<meta name='viewport' content='width=device-width, initial-scale=1.0' />
-			<meta name='theme-color' content='#CCD2FF' />
+			<meta name='theme-color' content='#0020FF' />
 			
 			<meta name='author' content='Josua Fernando' />
 			<meta name='description' content={description} />

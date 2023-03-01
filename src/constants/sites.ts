@@ -1,5 +1,5 @@
 export const sites = {
 	siteName: 'Aen Jojo',
 	siteUrl: 'https://aenjojo.dev',
-	siteThumbnail: '/images/logo/AenJojo.png',
+	siteThumbnail: '/images/aenjojo-banner.png',
 };

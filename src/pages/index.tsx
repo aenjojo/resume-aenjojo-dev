@@ -29,7 +29,6 @@ export default function HomePage({ latestProjects, latestPosts }: HomePropsType)
 				description={'Josua Fernando\'s personal website is a page that used to list all of his works and portfolios'}
 				keywords={['aenjojo', 'personal website', 'portfolio page', 'josua fernando']}
 				pathUrl='/'
-				thumbnail='/images/logo/AenJojo.png'
 			/>
 			<Header />
 			<main>

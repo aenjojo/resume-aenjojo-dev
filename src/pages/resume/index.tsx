@@ -1,36 +1,9 @@
-import { GenericCard } from '#components/Card';
 import { MainTitle, SectionTitle } from '#components/Heading';
-import { TimelineContainer, TimelineItem } from '#components/Timeline';
+import { TimelineContainer } from '#components/Timeline';
 import { Breadcrumb } from '#components/Navigation';
 import { MainLayout } from '#layouts/MainLayout';
-import { latestEducations as educations } from '#constants/educations';
-import { skills } from '#constants/skills';
-
-const educationsList = educations.map(education => (
-	<TimelineItem
-		key={education.studyPlace + education.startDate}
-		title={education.degree || education.subject}
-		subtitle={education.studyPlace}
-		date={`${education.startDate} - ${education.endDate}`}
-	>
-		<div className='main-content'>
-			<span>{education.description}</span>
-			<ul>
-				{education.studies.map(study => (
-					<li key={study}>{study}</li>
-				))}
-			</ul>
-		</div>
-	</TimelineItem>
-));
-
-const skillsList = skills.map(skill => (
-	<GenericCard
-		key={skill.name}
-		title={skill.name}
-		description={skill.description}
-	/>
-));
+import { EducationsList } from '#features/EducationsList';
+import { SkillsList } from '#features/SkillsList';
 
 export default function ResumePage() {
 	const title = 'Resume';
@@ -67,19 +40,19 @@ export default function ResumePage() {
 					</p>
 				</article>
 			</section>
-			
+
 			<section className='mt-4 py-2'>
 				<SectionTitle>Educations</SectionTitle>
 				<p>These are educations I ever take to learn programming, includes course and college, both formal and informal:</p>
 				<TimelineContainer>
-					{educationsList}
+					<EducationsList />
 				</TimelineContainer>
 			</section>
 
 			<section className='mt-4 py-2'>
 				<SectionTitle>Skills</SectionTitle>
 				<div className='grid grid-cols-4 md:grid-cols-8 gap-4'>
-					{skillsList}
+					<SkillsList />
 				</div>
 			</section>
 		</MainLayout>

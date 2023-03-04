@@ -22,11 +22,12 @@ const educations: educationsType[] = [{
 }, {
 	studyPlace: 'STIKOM Tunas Bangsa',
 	subject: 'Computer Science',
-	degree: 'Bachelor of Informatics',
+	degree: 'Bachelor of Computer Science',
 	startDate: 'September 2018',
 	endDate: 'October 2022',
 	description: 'In college, I learn many things to get deeper knowledge on computer science',
 	studies: [
+		'Algorithm',
 		'Data Structures',
 		'Databases',
 		'Web Development',

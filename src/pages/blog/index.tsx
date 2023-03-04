@@ -13,7 +13,7 @@ export interface BlogPropsType {
 }
 
 export default function Blog({ postsData }: BlogPropsType) {
-	const title = 'Blog Posts';
+	const title = 'Blog';
 	const breadcrumbPaths = [{
 		href: '/',
 		text: 'Home',

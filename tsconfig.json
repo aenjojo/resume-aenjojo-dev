@@ -18,6 +18,7 @@
     "paths": {
       "#components/*": ["./src/components/*"],
       "#constants/*": ["./src/constants/*"],
+      "#features/*": ["./src/features/*"],
       "#layouts/*": ["./src/layouts/*"],
       "#libs/*": ["./src/libs/*"],
       "#services/*": ["./src/services/*"],

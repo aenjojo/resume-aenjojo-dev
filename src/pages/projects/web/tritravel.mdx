@@ -1,0 +1,50 @@
+import { ProjectLayout } from '#layouts/ProjectLayout';
+
+export const meta = {
+	title: 'TriTravel',
+	description: 'A website about travel agency created to accomplish RevoU Mini Course',
+	fullDate: '8 March 2023',
+	date: '2023-03-08',
+	image: '/images/projects/tritravel.png',
+	techStack: ['html', 'css', 'js'],
+	keywords: ['tritravel', 'revou', 'fcse', 'revou mini course'],
+	codeUrl: 'https://github.com/aenjojo/revou-fcse',
+	demoUrl: 'https://aenjojo.github.io/revou-fcse',
+};
+
+# Introduction
+TriTravel is a mini project I created to accomplish RevoU's Software Engineer Fundamental Course assignment.
+RevoU is a revolutionary online course, which they offer 2 weeks (10 days) of free course as introduction,
+which I joined just to refresh my knowledge in the basic web development.
+This project itself is about creating a website for a travel agency by slicing the mockup and following the brief given.
+
+# The Requirements
+In this project, although I am allowed to create it with whatever I like freely, but I must follow some requirements.
+These requirements are specified in the brief, such as:
+1. Follow the mockup layout and must style it with plain css (no framework).
+2. The header navigation must follow these:
+	* **Home** must link to the hero banner section.
+	* **Our Package** must link to our package section.
+	* **Call Us** must link to call us section.
+3. Implement auto-slide hero banner with vanilla.js (no framework).
+4. Implement basic client-side form validation with javascript (no framework).
+5. Must have `index.html` and `style.css`.
+
+Those features I said above must not use any framework and just plain css and js.
+It was intentionally to make sure the learner know the fundamental and not "just use X framework" to solve it.
+
+export default ({ children }) => (
+	<ProjectLayout
+		metadata={{
+			title: meta.title,
+			description: meta.description,
+			keywords: meta.keywords,
+			image: meta.image,
+			techStack: meta.techStack,
+			codeUrl: meta.codeUrl,
+			demoUrl: meta.demoUrl,
+		}}
+	>
+		{children}
+	</ProjectLayout>
+);

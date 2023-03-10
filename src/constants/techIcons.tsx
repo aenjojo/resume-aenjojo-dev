@@ -6,6 +6,9 @@ import {
 	SiDiscord,
 	SiTypescript,
 	SiJavascript,
+	SiHtml5,
+	SiCss3,
+	SiMarkdown,
 } from 'react-icons/si';
 
 export type techIconsType = {
@@ -46,4 +49,16 @@ export const techIcons: techIconsType[] = [{
 	id: 'ts',
 	name: 'Typescript',
 	icon: <SiTypescript size='24' title='Typescript' fill='#3178c6' />,
+}, {
+	id: 'html',
+	name: 'HTML',
+	icon: <SiHtml5 size='24' title='HTML' fill='#e34f26' />,
+}, {
+	id: 'css',
+	name: 'CSS',
+	icon: <SiCss3 size='24' title='CSS' fill='#1572b6' />,
+}, {
+	id: 'mdx',
+	name: 'MarkdownX',
+	icon: <SiMarkdown size='24' title='MDX' fill='#000000' />,
 }];

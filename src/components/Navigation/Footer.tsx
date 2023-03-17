@@ -8,20 +8,20 @@ import Logo from '#public/images/logo/aenjojo-full-color.svg';
 const SocialMediaList = [
 	{
 		name: 'Instagram',
-		link: 'https://instagram.com/aenjojo_09',
-		icon: <FaInstagram size={24} />
+		link: 'https://instagram.com/aenjojo',
+		icon: <FaInstagram size={24} title='Instagram of Aen Jojo' />
 	},{
 		name: 'Twitter',
 		link: 'https://twitter.com/aen_jojo_',
-		icon: <FaTwitter size={24} />
+		icon: <FaTwitter size={24} title='Twitter of Aen Jojo' />
 	},{
 		name: 'LinkedIn',
 		link: 'https://www.linkedin.com/in/aenjojo',
-		icon: <FaLinkedin size={24} />
+		icon: <FaLinkedin size={24} title='LinkedIn of Aen Jojo' />
 	},{
 		name: 'GitHub',
 		link: 'https://github.com/aenjojo',
-		icon: <FaGithub size={24} />
+		icon: <FaGithub size={24} title='GitHub of Aen Jojo' />
 	},
 ].map(({ name, link, icon }) => (
 	<ButtonLink

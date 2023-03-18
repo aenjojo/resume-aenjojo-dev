@@ -9,6 +9,7 @@ import { getProjects, type metaDataType as projectMeta } from '#libs/projects';
 import { getPosts, type metaDataType as postMeta } from '#libs/posts';
 import { sortContent } from '#libs/sortContent';
 import ShowcaseImage from '#public/images/showcase.png';
+import { TopButton } from '#components/Button';
 
 interface HomePropsType {
 	latestProjects: {
@@ -106,6 +107,7 @@ export default function HomePage({ latestProjects, latestPosts }: HomePropsType)
 						<ButtonLink value='View All Posts' href='/blog' variant='outline' />
 					</section>
 				</section>
+				<TopButton />
 			</main>
 			<Footer />
 		</>

@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import { Header, Footer } from '#components/Navigation';
 import { SEO, type SEOPropsType } from '#components/Head';
 import clsx from 'clsx';
+import { TopButton } from '#components/Button';
 
 interface MainLayoutType {
 	children: ReactNode | ReactNode[],
@@ -21,6 +22,7 @@ export function MainLayout({ children, display, seo }: MainLayoutType) {
 			<Header />
 			<main className={MainLayoutStyle}>
 				{children}
+				<TopButton />
 			</main>
 			<Footer />
 		</>

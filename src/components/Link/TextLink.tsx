@@ -8,6 +8,7 @@ export function TextLink({ href, value, openInNewTab, className }: TextLinkProps
 	const isExternalLink = Boolean(href) && !href.toString().startsWith('/') && !href.toString().startsWith('#');
 	const TextLinkStyle = clsx([
 		styles.base,
+		openInNewTab || isExternalLink ? 'inline-flex flex-nowrap items-center' : 'inline',
 		className,
 	]);
 

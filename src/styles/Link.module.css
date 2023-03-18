@@ -1,6 +1,5 @@
 .base {
     @apply
-        inline-flex flex-nowrap items-center
         transition-all duration-200
         cursor-pointer font-medium
         underline decoration-2 underline-offset-4

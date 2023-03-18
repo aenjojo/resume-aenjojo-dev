@@ -9,7 +9,7 @@ export interface GenericTitlePropsType {
 
 export function GenericTitle({ children, withId, withMargin }: GenericTitlePropsType) {
 	const GenericTitleStyle = clsx([
-		'text-lg font-semibold',
+		'text-lg font-semibold scroll-mt-16',
 		withMargin && 'mb-2',
 		withId && 'group',
 	]);
@@ -27,7 +27,7 @@ export function GenericTitle({ children, withId, withMargin }: GenericTitleProps
 				<TextLink
 					href={`#${id}`}
 					value='#'
-					className='no-underline invisible group-hover:visible'
+					className='no-underline hidden group-hover:inline-block'
 				/>
 			)}
 		</h4>

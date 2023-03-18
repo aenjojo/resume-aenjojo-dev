@@ -6,7 +6,7 @@ export interface SectionTitlePropsType extends GenericTitlePropsType {};
 
 export function SectionTitle({ children, withId, withMargin }: SectionTitlePropsType) {
 	const SectionTitleStyle = clsx([
-		'text-2xl font-extrabold',
+		'text-2xl font-extrabold scroll-mt-16',
 		withMargin && 'mb-4',
 		withId && 'group',
 	]);
@@ -24,7 +24,7 @@ export function SectionTitle({ children, withId, withMargin }: SectionTitleProps
 				<TextLink
 					href={`#${id}`}
 					value='#'
-					className='no-underline invisible group-hover:visible'
+					className='no-underline hidden group-hover:inline-block'
 				/>
 			)}
 		</h2>

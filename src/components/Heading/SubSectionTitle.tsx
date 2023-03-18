@@ -6,7 +6,7 @@ export interface SubSectionTitlePropsType extends GenericTitlePropsType {};
 
 export function SubSectionTitle({ children, withId, withMargin }: SubSectionTitlePropsType) {
 	const SubSectionTitleStyle = clsx([
-		'text-xl font-bold',
+		'text-xl font-bold scroll-mt-16',
 		withMargin && 'mb-2',
 		withId && 'group',
 	]);
@@ -24,7 +24,7 @@ export function SubSectionTitle({ children, withId, withMargin }: SubSectionTitl
 				<TextLink
 					href={`#${id}`}
 					value='#'
-					className='no-underline invisible group-hover:visible'
+					className='no-underline hidden group-hover:inline-block'
 				/>
 			)}
 		</h3>

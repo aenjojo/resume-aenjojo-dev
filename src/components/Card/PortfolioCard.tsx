@@ -46,6 +46,7 @@ export function PortfolioCard({ id, title, type, description, imageSource, demoU
 						href={codeUrl}
 						variant='empty'
 						icon={<MdOutlineCode size={20} />}
+						openInNewTab={false}
 						className='justify-center'
 					/>}
 					{demoUrl && <ButtonLink
@@ -53,6 +54,7 @@ export function PortfolioCard({ id, title, type, description, imageSource, demoU
 						href={demoUrl}
 						variant='empty'
 						icon={<MdOutlinePublic size={20} />}
+						openInNewTab={false}
 						className='justify-center'
 					/>}
 				</div>

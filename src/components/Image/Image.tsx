@@ -8,7 +8,7 @@ export interface ImagePropsType {
 
 export function Image({ src, alt, decorationOnly }: ImagePropsType) {
 	return (
-		<span className='block relative overflow-hidden h-72 lg:h-96'>
+		<span className='block relative overflow-hidden h-48 md:h-72 lg:h-96'>
 			<NextImage
 				src={src}
 				alt={decorationOnly ? '' : alt}

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-	@apply font-sans bg-base-100;
+	@apply font-sans bg-base-100 scroll-smooth;
 
 	/* scrollbar firefox */
 	scrollbar-width: thin;

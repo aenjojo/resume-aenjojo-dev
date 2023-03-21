@@ -13,6 +13,6 @@ export const skills: skillsType[] = [{
 	name: 'TypeScript',
 	description: 'I learned this language lately, since I need to know data types from modules I create when I rewrite my discord bot',
 }, {
-	name: 'Next.js',
-	description: 'I started to learn this framework in 2021 and keep practicing to makes me familiar to the React environment',
+	name: 'Next.js (React)',
+	description: 'I started to learn this react framework in 2021 and keep practicing to makes me familiar to the React environment',
 }];

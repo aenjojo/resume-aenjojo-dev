@@ -48,7 +48,7 @@
 /* code block */
 .main-content code {
 	@apply
-		p-1 font-mono rounded
+		px-1 py-0.5 font-mono rounded
 		bg-base-200 bg-opacity-30
 		
 		only:bg-transparent only:p-0

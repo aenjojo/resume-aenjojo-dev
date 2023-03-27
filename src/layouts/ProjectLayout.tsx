@@ -70,7 +70,7 @@ export function ProjectLayout({ children, metadata }: ProjectLayoutType) {
 				<MainTitle>{metadata.title}</MainTitle>
 				<div className='my-2 flex flex-row gap-4 items-center justify-center'>
 					{metadata.demoUrl && <ButtonLink
-						value='Demo'
+						value='Visit'
 						href={metadata.demoUrl}
 						variant='fill'
 						icon={<MdOutlinePublic size={20} />}

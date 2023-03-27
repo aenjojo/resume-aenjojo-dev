@@ -50,7 +50,7 @@ export function PortfolioCard({ id, title, type, description, imageSource, demoU
 						className='justify-center'
 					/>}
 					{demoUrl && <ButtonLink
-						value='Demo'
+						value='Visit'
 						href={demoUrl}
 						variant='empty'
 						icon={<MdOutlinePublic size={20} />}

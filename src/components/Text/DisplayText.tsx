@@ -19,10 +19,10 @@ export function DisplayText({ value, size, className }: DisplayTextPropsType) {
 	]);
 
 	return (
-		<div
+		<p
 			className={DisplayTextStyle}
 		>
 			{value}
-		</div>
+		</p>
 	);
 }

@@ -42,6 +42,7 @@ export function Header() {
 						src={Logo}
 						className='w-32'
 					/>
+					<p className='sr-only'>Go to home</p>
 				</Link>
 				<nav className='hidden lg:flex lg:flex-row lg:gap-2 items-center justify-center'>
 					{NavigationList}

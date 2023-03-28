@@ -30,7 +30,7 @@ export function PortfolioCard({ id, title, type, description, imageSource, demoU
 					sizes='(min-width: 1536px) 15vw, (min-width: 1024px) 25vw, (min-width: 768px) 50vw, 75vw'
 				/>
 			</section>
-			<section className='flex flex-col gap-4 p-4 border-t border-primary-200 h-48'>
+			<section className='flex flex-col gap-4 p-4 border-t border-base-300 h-48'>
 				<div className='flex-grow'>
 					<Link
 						href={projectPageUrl}

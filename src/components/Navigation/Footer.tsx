@@ -1,7 +1,7 @@
 import { ButtonLink } from '#components/Link';
 import { DisplayText } from '#components/Text';
 import { ButtonGroup } from '#components/Button';
-import { FaInstagram, FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { SiInstagram, SiTwitter, SiLinkedin, SiGithub } from 'react-icons/si';
 import Image from 'next/image';
 import Logo from '#public/images/logo/aenjojo-full-color.svg';
 
@@ -9,19 +9,19 @@ const SocialMediaList = [
 	{
 		name: 'Instagram',
 		link: 'https://instagram.com/aenjojo',
-		icon: <FaInstagram size={24} title='Instagram of Aen Jojo' />
+		icon: <SiInstagram size={24} title='Instagram of Aen Jojo' />
 	},{
 		name: 'Twitter',
 		link: 'https://twitter.com/aen_jojo_',
-		icon: <FaTwitter size={24} title='Twitter of Aen Jojo' />
+		icon: <SiTwitter size={24} title='Twitter of Aen Jojo' />
 	},{
 		name: 'LinkedIn',
 		link: 'https://www.linkedin.com/in/aenjojo',
-		icon: <FaLinkedin size={24} title='LinkedIn of Aen Jojo' />
+		icon: <SiLinkedin size={24} title='LinkedIn of Aen Jojo' />
 	},{
 		name: 'GitHub',
 		link: 'https://github.com/aenjojo',
-		icon: <FaGithub size={24} title='GitHub of Aen Jojo' />
+		icon: <SiGithub size={24} title='GitHub of Aen Jojo' />
 	},
 ].map(({ name, link, icon }) => (
 	<ButtonLink

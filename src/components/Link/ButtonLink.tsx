@@ -8,6 +8,7 @@ export interface ButtonLinkPropsType extends BaseLinkPropsType {
 };
 
 export function ButtonLink({ href, value, icon, openInNewTab, iconOnly, variant, reverse, className }: ButtonLinkPropsType) {
+	const isExternalLink = Boolean(href) && !href.toString().startsWith('/') && !href.toString().startsWith('#');
 	const ButtonLinkStyle = clsx([
 		styles.button,
 		styles[variant],
@@ -24,9 +25,10 @@ export function ButtonLink({ href, value, icon, openInNewTab, iconOnly, variant,
 			href={href}
 			value={value}
 			icon={icon}
-			openInNewTab={openInNewTab}
+			openInNewTab={openInNewTab ?? isExternalLink}
 			iconOnly={iconOnly}
 			className={ButtonLinkStyle}
+			isExternalLink={isExternalLink}
 		/>
 	);
 }

@@ -5,9 +5,10 @@ import styles from '#styles/Link.module.css';
 export interface TextLinkPropsType extends BaseLinkPropsType {};
 
 export function TextLink({ href, value, openInNewTab, className }: TextLinkPropsType) {
+	const isExternalLink = Boolean(href) && !href.toString().startsWith('/') && !href.toString().startsWith('#');
 	const TextLinkStyle = clsx([
 		styles.base,
-		styles.text,
+		openInNewTab || isExternalLink ? 'inline-flex flex-nowrap items-center' : 'inline',
 		className,
 	]);
 
@@ -16,7 +17,8 @@ export function TextLink({ href, value, openInNewTab, className }: TextLinkProps
 			href={href}
 			value={value}
 			className={TextLinkStyle}
-			openInNewTab={openInNewTab}
+			openInNewTab={openInNewTab ?? isExternalLink}
+			isExternalLink={isExternalLink}
 		/>
 	);
 }

@@ -5,7 +5,7 @@ export interface ChipPropsType {
 export function Chip({ value }: ChipPropsType) {
 	return (
 		<div
-			className='bg-primary-500 text-primary-100 rounded-full inline-block border border-primary-300 px-3 text-xs'
+			className='bg-primary-50 text-primary-500 rounded inline-block px-2 py-0.5 text-xs'
 		>
 			{value}
 		</div>

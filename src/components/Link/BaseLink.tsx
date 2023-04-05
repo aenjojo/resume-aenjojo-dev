@@ -8,12 +8,11 @@ export interface BaseLinkPropsType {
 	icon?: ReactNode,
 	iconOnly?: boolean,
 	openInNewTab?: boolean,
+	isExternalLink?: boolean,
 	className?: string,
 };
 
-export function BaseLink({ href, value, icon, iconOnly, openInNewTab, className }: BaseLinkPropsType) {
-	const isExternalLink = Boolean(href) && !href.toString().startsWith('/') && !href.toString().startsWith('#');
-
+export function BaseLink({ href, value, icon, iconOnly, openInNewTab, isExternalLink, className }: BaseLinkPropsType) {
 	if (!isExternalLink) {
 		return (
             <Link

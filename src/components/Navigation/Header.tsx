@@ -1,43 +1,53 @@
 import { Button } from '#components/Button';
 import { ButtonLink } from '#components/Link';
-import { DisplayText } from '#components/Text';
 import { MdOutlineMenu, MdOutlineClose } from 'react-icons/md';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
+import Logo from '#public/images/logo/aenjojo-full-color.svg';
+
+const NavigationList = [
+	'Resume',
+	'Projects',
+	'Blog'
+].map(element => (
+	<ButtonLink
+		key={element}
+		href={`/${element.toLowerCase()}`}
+		value={element}
+		variant='empty'
+		className='justify-center'
+	/>
+));
 
 export function Header() {
 	const [isOpen, setIsOpen] = useState(false);
 
-	const NavigationList = [
-		'Resume',
-		'Projects',
-		'Blog'
-	].map(element => (
-		<ButtonLink
-			key={element}
-			href={`/${element.toLowerCase()}`}
-			value={element}
-			variant='empty'
-			className='justify-center'
-		/>
-	))
+	useEffect(() => {
+		if (window) {
+			document.body.style.overflow = isOpen ? 'hidden' : 'auto';
+		}
+	}, [isOpen]);
 
 	return (
-		<header className='bg-gradient-to-r from-primary-100 to-secondary-100 border-b border-b-primary-200'>
+		<header className='bg-primary-50 border-b border-b-primary-100 sticky top-0 z-10'>
 			<section className='container mx-auto flex flex-row justify-between px-2 py-1'>
-				<Link href='/' className='flex flex-row justify-center items-center focus-visible:outline-offset-4 focus-visible:outline-primary-300'>
-					<div className='relative w-6 h-8 mr-2'>
-						<Image alt='' src='/AenJojo - Transparent.png' fill={true} className='object-contain' sizes='25vw' />
-					</div>
-					<DisplayText value='Aen' size='XXL' className='text-center text-secondary-500 inline-block' />
-					<DisplayText value='Jojo' size='XXL' className='text-center text-primary-500 inline-block' />
+				<Link
+					href='/'
+					className='flex flex-row justify-center items-center focus-visible:outline-offset-4 focus-visible:outline-primary-300'
+				>
+					<Image
+						alt='main logo'
+						src={Logo}
+						className='w-32'
+					/>
+					<p className='sr-only'>Go to home</p>
 				</Link>
-				<nav className='hidden lg:flex lg:flex-row lg:gap-2'>
+				<nav className='hidden lg:flex lg:flex-row lg:gap-2 items-center justify-center'>
 					{NavigationList}
 				</nav>
-				<section className='flex lg:hidden'>
+				<section className='flex lg:hidden items-center justify-center'>
 					<Button
 						value='Menu'
 						icon={isOpen
@@ -46,17 +56,19 @@ export function Header() {
 						}
 						iconOnly
 						variant={isOpen ? 'fill' : 'empty'}
-						onclick={() => setIsOpen(!isOpen)}
+						onClick={() => setIsOpen(!isOpen)}
 					/>
 				</section>
 			</section>
 			<nav
 				className={clsx([
-					'flex flex-col gap-2 lg:hidden w-10/12 mx-auto my-2 transition-all duration-300',
-					isOpen ? 'h-auto' : 'h-0 hidden'
+					'lg:hidden w-full bg-primary-50 transition-all duration-300 absolute',
+					isOpen ? 'h-screen' : 'h-0 invisible opacity-0'
 				])}
 			>
-				{NavigationList}
+				<div className='mx-auto my-2 w-10/12 flex flex-col gap-2'>
+					{NavigationList}
+				</div>
 			</nav>
 		</header>
 	);

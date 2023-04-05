@@ -1,0 +1,106 @@
+import { BlogLayout } from '#layouts/BlogLayout';
+
+export const meta = {
+	title: 'Should You Style Everything in Your Website',
+	excerpt: 'When developing a website, we always encounter a design step. This step is aimed to create a good and comfortable UI for the users, so it gives a better user experience.',
+	fullDate: '3 April 2023',
+	date: '2023-04-03',
+	keywords: ['html style', 'modify default style'],
+	image: '',
+	tags: ['html', 'css', 'web'],
+};
+
+# Introduction
+When developing a website, we always encounter a design step. This step is aimed to create a good and comfortable UI
+for the users, so it gives a better user experience. Designing the UI also intended to show the brand of the website
+or the company that owned the website. But, should we design everything in the website? Or just design some
+and left the other as is? To know the answer, let's read the explanation below.
+
+# Commonly Designed Elements
+During web designing, there are some elements that is commonly designed, like `<header>`, `<input>`, etc.
+This was intended to give styles to those elements, because the elements previously not have any design.
+For example, `<header>`, `<footer>`, and `<div>`. There are some elements that already have their own design
+although still a default-looking style, redesigned to give a better UX. For example, `<button>`, `<input>`, and `<h1>`.
+
+Designing those elements are just like a must when designing a website, because in the web design process,
+those are always be the focus. Priotizing to design on those elements is not without any purpose, because those elements
+are the main elements, where those element always be seen by the uses and user interaction also exists in some of those
+elements. So, designing the UI very well will provides good UX and clearly display the brand.
+
+Not all of the designed elements are fully redesigned, there are some elements that are only partially designed.
+For example, on `<button>` and `<input>`, there is an `outline` that will not be redesigned and is left as it is.
+This aims to provide accessibility that will affect UX. Even so, there are also few developers who deliberately remove it
+with the aim of not breaking the well-designed UI. This is of course not good, because it reduces accessibility of
+the website, so leaving it without any redesign would be much better.
+
+# Rarely Designed Elements
+After elements that are commonly designed, there are also elements that is rarely designed. For example, a scrollbar.
+Scrollbar was rarely designed because of the difference of each browser process css and also the difference of
+the devices, such as desktop and mobile browser. As an example, in webkit based browser, such as Chrome, Safari, and Edge,
+scrollbar can be designed by using these css code:
+```css
+::-webkit-scrollbar {
+	/* width will applied to the vertical scroll bar */
+	width: 8px;
+
+	/* height will applied to the horizontal scroll bar */
+	height: 8px;
+}
+::-webkit-scrollbar-track {
+	background-color: rgb(213 220 227 / 1);
+}
+::-webkit-scrollbar-thumb {
+	background-color: rgb(102 121 255 / 1);
+}
+```
+
+While in Firefox browser, that code can't be used to style the scrollbar. To do so, we can use the preferred way,
+which make use the code below that is the semantic way to style scrollbar.
+```css
+:root {
+	scrollbar-width: thin;
+	/* the code below is the "track color" and "thumb color" */
+	scrollbar-color: rgb(213 220 227 / 1) rgb(102 121 255 / 1);
+}
+```
+
+But, in Opera browser, those 2 ways can't be implemented to style the scrollbar, because there is no support to style
+scrollbar in that browser at the time of writing this article. 
+
+In mobile phone browsers, the styling of the scrollbar will follow it's desktop browser's style. But, the styling can't be
+applied only to main scrollbar, because it has the auto-hide scrollbar and the browser already set up to not accept
+modifying of the main scrollbar.
+
+Because many things must be did to style the scrollbar, many developers choose to let it as it is. This is not only
+happened to scrollbar, but for some other elements too, such as radio input, checkbox, color picker, etc.
+That's why some websites have default looking elements in there.
+
+# Should Those Elements Be Designed?
+The real answer is depends on your need. But, my advice is just let it as it is, if it don't ruin your UI design.
+You might ever heard "don't touch if it works" phrase and that is true if applied here. In many web development,
+it is better to keep the default styles, because it can provides good UX. It also need more time to redesign and test
+the element in every browser to make sure it works as intended.
+
+My advice is not a must, it is fine if you want to redesign those element, especially if you want it to match your brand
+style. But, remember to make sure it will works in other browsers and devices, especially the old ones.
+
+# Conclusion
+Designing element is a must during web development, so the elements used that already have their own style will be
+redesigned to match the planned UI design. But, some elements are rarely to be designed because they need extra care.
+So, in many cases are not designed, because there is no problem will happened if not modified. Although, it's not bad
+to redesign it, especially if the original design is a problem to the planned UI or even the UX.
+
+export default ({ children }) => (
+	<BlogLayout
+		metadata={{
+			title: meta.title,
+			description: meta.excerpt,
+			keywords: meta.keywords,
+			date: meta.fullDate,
+			image: meta.image,
+			tags: meta.tags,
+		}}
+	>
+		{children}
+	</BlogLayout>
+);

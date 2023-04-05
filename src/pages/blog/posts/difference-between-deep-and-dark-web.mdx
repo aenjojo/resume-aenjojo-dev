@@ -1,0 +1,98 @@
+import { BlogLayout } from '#layouts/BlogLayout';
+import { Alert } from '#components/Alert';
+
+export const meta = {
+	title: 'What is Deep Web and Dark Web',
+	excerpt: 'You might encounter information about bad things in deep/dark web, but is that so? To further know what are them, it is better to know one by one',
+	fullDate: '17 March 2023',
+	date: '2023-03-17',
+	keywords: ['deep web', 'dark web', 'surface web', 'deep and dark web difference'],
+	image: '',
+	tags: ['web'],
+};
+
+# Introduction
+You might encounter some peoples telling about deep web and dark web and everything bad hide in there,
+like cybercrime, drugs sells, and illegal things, or even storing some weird creepypasta videos.
+But, what actually are they?
+
+Web consist of 3 parts, that often showed with the image of iceberg, like this image below.
+
+![iceberg that divided by 3 parts to illustrate the web, which are surface, deep, and dark web](/images/posts/web-as-in-the-iceberg.png)
+
+To further know what are their differences, it's better to know what is exactly those parts illustrated in the image.
+
+# Surface Web
+Surface web, sometimes called indexable website, is the part of web which can be indexed by the search engine,
+like Google and Bing. It means, those website will shows up if we type the keyword or some of its content
+in the search engine. There are many webpage that is indexed, probably more than a billion pages.
+But, it just a small part of the web in the internet. Some sources said it just around 4% of the internet.
+
+# Deep Web
+Deep web, is the part of web which can not be indexed by the search engine.
+Deep web consists of webpage that need authentication or paywall to access.
+Most of the websites we accessed everyday are deep web, since some of them need authentication to access and use.
+Some sources even said it covers 96% of the internet. Although, I'm not really sure about it,
+but you get the idea about how large is the deep web than the surface web.
+
+One example of the deep web is your post in Instagram. Nobody can access it by just using search engine.
+But, a public Pinterest post is considered a part of surface web, because it can be indexed by search engine.
+Another example of deep web are your chat page, your bank transaction page, and the user setting page in a website.
+Simply, if you can not find the webpage on the search engine or you need to login to access the webpage,
+it's considered to be the part of the deep web.
+
+Deep web itself commonly to be misunderstood by peoples to be the same as dark web,
+since both can not be accessed through search engine. But, what is the dark web itself? Let's read the next section.
+
+# Dark Web
+Dark web, is the part of web which not only can not be indexed by the search engine, but also needs anonymity to access.
+Simply said, dark web is a deep web that requires anonymity and special network to enter.
+Dark web is just a very small part in the deep web.
+
+The content in the dark web itself basically the same like in the surface web or deep web.
+The reason why some peoples think dark web is bad are caused by the misuse of it by some peoples for illegal activity.
+Some examples are drugs and illegal weapon selling.
+They use it because dark web provide anonymity for them to hide their activity from laws.
+
+One way to access the dark web is by using TOR connection.
+By using TOR connection, we are not only become anonymous, but also can access websites with `.onion` domain.
+
+<Alert type='warning'>
+	This post only for educational purpose. Any action or misuse you did in there, is not my responsibility.
+	It is better to learn more about dark web before process to enter it, since it is a bit different from other web
+	and there are some cybercrime hide in there.
+</Alert>
+<Alert type='danger'>
+	Never shares your sensitive information, especially to untrusted websites you found in there
+	to prevent you from cybercrime, such as scams and phising.
+</Alert>
+
+# Is Dark Web Really That Scary?
+No. It just the same like other web. It does have scary and illegal things, but surface web and deep web also have that.
+How did I know it? Well, I have been accessed it previously. But it is better to stay safe, since the dark web has more
+cybercrimes than in the normal deep web.
+
+# BONUS: Mariana Web
+It is a fictious part of web that claimed by some peoples to be the deepest one.
+It's name comes from Mariana Trench, which is the deepest place in the world (around 11,000 km below the sea level).
+It even believed to contain military and government secrets.
+
+# Conclusion
+The web is divided by how they can be accessed through the search engine.
+The deep web and the dark web are the web which cannot be accessed by search engine.
+Dark web itself just a part of deep web, which means the deep web are not equally the same as dark web.
+
+export default ({ children }) => (
+	<BlogLayout
+		metadata={{
+			title: meta.title,
+			description: meta.excerpt,
+			keywords: meta.keywords,
+			date: meta.fullDate,
+			image: meta.image,
+			tags: meta.tags,
+		}}
+	>
+		{children}
+	</BlogLayout>
+);

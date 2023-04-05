@@ -1,48 +1,55 @@
 import { ButtonLink } from '#components/Link';
 import { DisplayText } from '#components/Text';
 import { ButtonGroup } from '#components/Button';
-import { FaInstagram, FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { SiInstagram, SiTwitter, SiLinkedin, SiGithub } from 'react-icons/si';
+import Image from 'next/image';
+import Logo from '#public/images/logo/aenjojo-full-color.svg';
+
+const SocialMediaList = [
+	{
+		name: 'Instagram',
+		link: 'https://instagram.com/aenjojo',
+		icon: <SiInstagram size={24} title='Instagram of Aen Jojo' />
+	},{
+		name: 'Twitter',
+		link: 'https://twitter.com/aen_jojo_',
+		icon: <SiTwitter size={24} title='Twitter of Aen Jojo' />
+	},{
+		name: 'LinkedIn',
+		link: 'https://www.linkedin.com/in/aenjojo',
+		icon: <SiLinkedin size={24} title='LinkedIn of Aen Jojo' />
+	},{
+		name: 'GitHub',
+		link: 'https://github.com/aenjojo',
+		icon: <SiGithub size={24} title='GitHub of Aen Jojo' />
+	},
+].map(({ name, link, icon }) => (
+	<ButtonLink
+		key={`${name}@${link}`}
+		value={`AenJojo's ${name}`}
+		href={link}
+		variant='empty'
+		icon={icon}
+		iconOnly
+		openInNewTab
+	/>
+));
 
 export function Footer() {
-	const SocialMediaList = [
-		{
-			name: 'Instagram',
-			link: 'https://instagram.com/aenjojo_09',
-			icon: <FaInstagram size={24} />
-		},{
-			name: 'Twitter',
-			link: 'https://twitter.com/aen_jojo_',
-			icon: <FaTwitter size={24} />
-		},{
-			name: 'LinkedIn',
-			link: 'https://www.linkedin.com/aenjojo',
-			icon: <FaLinkedin size={24} />
-		},{
-			name: 'GitHub',
-			link: 'https://github.com/aenjojo',
-			icon: <FaGithub size={24} />
-		},
-	].map(({ name, link, icon }) => (
-		<ButtonLink
-			key={`${name}@${link}`}
-			value={name}
-			href={link}
-			variant='empty'
-			icon={icon}
-			iconOnly
-			openInNewTab
-		/>
-	));
-
 	return (
-		<footer className='bg-gradient-to-r from-primary-100 to-secondary-100 border-t border-t-primary-200'>
+		<footer className='bg-primary-50 border-t border-t-primary-100'>
 			<section className='mx-auto flex gap-2 flex-col px-2 py-4 items-center'>
 				<div>
-					<div className='flex flex-row justify-center items-center'>
-						<DisplayText value='Aen' size='XXL' className='text-center text-secondary-500 inline-block' />
-						<DisplayText value='Jojo' size='XXL' className='text-center text-primary-500 inline-block' />
-					</div>
-					<DisplayText value='aenjojo © 2022' size='S' className='text-center' />
+					<Image
+						alt=''
+						src={Logo}
+						className='w-28 stroke-primary-500'
+					/>
+					<DisplayText
+						value='aenjojo © 2022'
+						size='S'
+						className='text-center'
+					/>
 				</div>
 				<ButtonGroup direction='row'>
 					{SocialMediaList}

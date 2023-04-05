@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { ButtonHTMLAttributes, ReactNode } from 'react';
 import clsx from 'clsx';
 import styles from '#styles/Button.module.css';
 
@@ -9,10 +9,9 @@ export interface ButtonPropsType {
 	reverse?: boolean,
 	iconOnly?: boolean,
 	className?: string,
-	onclick?(): void,
 };
 
-export function Button({ value, icon, variant, reverse, iconOnly, className, onclick }: ButtonPropsType) {
+export function Button({ value, icon, variant, reverse, iconOnly, className, ...props }: ButtonPropsType & ButtonHTMLAttributes<HTMLButtonElement>) {
 	const LinkButtonStyle = clsx([
 		styles.button,
 		variant === 'fill' && styles.fill,
@@ -29,7 +28,7 @@ export function Button({ value, icon, variant, reverse, iconOnly, className, onc
 	return (
 		<button
 			className={LinkButtonStyle}
-			onClick={onclick}
+			{...props}
 		>
 			{icon && <span>{icon}</span>}
 			{value !== '' && (

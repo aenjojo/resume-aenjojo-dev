@@ -13,7 +13,7 @@ export const socialMedia: socialMediaType[] = [
 		icon: <SiInstagram size={24} title='Instagram of Aen Jojo' />,
 	},{
 		name: 'Twitter',
-		link: 'https://twitter.com/aen_jojo_',
+		link: 'https://twitter.com/aenjojo_',
 		icon: <SiTwitter size={24} title='Twitter of Aen Jojo' />,
 	},{
 		name: 'LinkedIn',

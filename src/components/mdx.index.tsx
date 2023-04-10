@@ -1,5 +1,5 @@
 import { MDXComponents } from 'mdx/types';
-import { MainTitle, SectionTitle, SubSectionTitle, GenericTitle } from '#components/Heading';
+import { SectionTitle, SubSectionTitle, GenericTitle } from '#components/Heading';
 import { TextLink } from '#components/Link';
 import { Image } from '#components/Image';
 

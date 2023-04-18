@@ -13,7 +13,7 @@ export function GenericCard({ title, description, icon }: GenericCardPropsType) 
 		<CardContainer>
 			<section className='h-auto p-4 flex flex-row lg:flex-col gap-4 items-start'>
 				{icon && (
-					<div className='rounded-full border border-base-300 p-2'>
+					<div className='rounded-full border border-base-300 dark:border-base-700 p-2'>
 						{icon}
 					</div>
 				)}

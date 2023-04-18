@@ -16,9 +16,9 @@ const iconList = {
 export function Alert({ type, children }: AlertPropsType) {
 	const style = clsx([
 		'p-4 my-4 flex flex-row gap-4',
-		type === 'info' && 'bg-sky-50 text-sky-600',
-		type === 'warning' && 'bg-yellow-50 text-yellow-700',
-		type === 'danger' && 'bg-red-50 text-red-700',
+		type === 'info' && 'bg-sky-50 text-sky-600 dark:bg-sky-800 dark:text-sky-200',
+		type === 'warning' && 'bg-yellow-50 text-yellow-700 dark:bg-yellow-900 dark:text-yellow-200',
+		type === 'danger' && 'bg-red-50 text-red-700 dark:bg-red-900 dark:text-red-200',
 	]);
 
 	return (

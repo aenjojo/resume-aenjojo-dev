@@ -4,11 +4,11 @@ import { skills } from '#constants/skills';
 export function SkillsList() {
 	return (
 		<>
-			{skills.map(skill => (
+			{skills.map(({ name, data }) => (
 				<GenericCard
-					key={skill.name}
-					title={skill.name}
-					description={skill.description}
+					key={name}
+					title={name}
+					description={data.join(', ')}
 				/>
 			))}
 		</>

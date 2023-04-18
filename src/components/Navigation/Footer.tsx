@@ -6,7 +6,7 @@ import Logo from '#public/images/logo/aenjojo-full-color.svg';
 
 export function Footer() {
 	return (
-		<footer className='bg-primary-50 border-t border-t-primary-100'>
+		<footer className='bg-primary-50 dark:bg-primary-900 border-t border-t-primary-100 dark:border-t-primary-700'>
 			<section className='mx-auto flex gap-2 flex-col px-2 py-4 items-center'>
 				<div>
 					<Image

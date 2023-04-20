@@ -18,8 +18,9 @@ const educations: educationsType[] = [{
 		'HTML',
 		'CSS',
 		'JavaScript',
-		'React',
 		'SQL',
+		'Web Development Fundamentals',
+		'React + Redux',
 		'Responsive Web Design',
 		'Coding for Marketer',
 	],
@@ -35,8 +36,10 @@ const educations: educationsType[] = [{
 		'Data Structures',
 		'Databases',
 		'Web Development',
-		'Object-oriented Programming',
 		'Software Engineering',
+		'Object-oriented Programming',
+		'Information Systems Project Management',
+		'Programming Languages',
 		'Artificial Intelligence',
 	],
 }, {
@@ -48,7 +51,8 @@ const educations: educationsType[] = [{
 	studies: [
 		'HTML',
 		'CSS',
-		'JavaScript'
+		'JavaScript',
+		'Git',
 	],
 }];
 

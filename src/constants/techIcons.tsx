@@ -11,6 +11,10 @@ import {
 	SiTailwindcss,
 	SiDiscord,
 	SiVite,
+	SiRollupdotjs,
+	SiPostcss,
+	SiStorybook,
+	SiJest,
 	SiVercel,
 	SiGithubpages,
 } from 'react-icons/si';
@@ -85,6 +89,22 @@ export const techIcons: techIconsType[] = [
 		id: 'vite',
 		name: 'Vite',
 		icon: <SiVite size='24' title='Vite.js' fill='#646cff' />,
+	}, {
+		id: 'rollup',
+		name: 'Rollup',
+		icon: <SiRollupdotjs size='24' title='Rollup.js' fill='#EC4A3F' />,
+	}, {
+		id: 'postcss',
+		name: 'PostCSS',
+		icon: <SiPostcss size='24' title='Postcss' fill='#DD3A0A' />,
+	}, {
+		id: 'storybook',
+		name: 'Storybook',
+		icon: <SiStorybook size='24' title='Storybook' fill='#FF4785' />,
+	}, {
+		id: 'jest',
+		name: 'Jest',
+		icon: <SiJest size='24' title='Jest' fill='#C21325' />,
 	},
 	/**
 	 * deployments

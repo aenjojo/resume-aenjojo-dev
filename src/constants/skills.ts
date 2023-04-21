@@ -1,18 +1,41 @@
 export type skillsType = {
 	name: string,
-	description: string,
+	data: string[],
 };
 
 export const skills: skillsType[] = [{
-	name: 'Web Development',
-	description: 'I have been learning about web development since 2017, but I started to create one that go for production mode in 2022',
+	name: 'Languages',
+	data: [
+		'HTML', 'CSS', 'JavaScript', 'TypeScript', 'SQL', 'MDX', 'JSON',
+	],
 }, {
-	name: 'JavaScript',
-	description: 'I have been using JS since 2017 and use it to develop a discord bot in 2018',
+	name: 'Frameworks',
+	data: [
+		'Next JS', 'React', 'Svelte', 'Tailwind CSS', 'Express JS',
+	],
 }, {
-	name: 'TypeScript',
-	description: 'I learned this language lately, since I need to know data types from modules I create when I rewrite my discord bot',
+	name: 'Environments',
+	data: [
+		'Git', 'Yarn', 'NPM', 'Node JS',
+	],
 }, {
-	name: 'Next.js (React)',
-	description: 'I started to learn this react framework in 2021 and keep practicing to makes me familiar to the React environment',
+	name: 'Deployments',
+	data: [
+		'Vercel', 'GitHub Pages',
+	],
+}, {
+	name: 'Tools',
+	data: [
+		'GitHub', 'VS Code', 'Postman',
+	],
+}, {
+	name: 'Database Management Systems',
+	data: [
+		'MySQL',
+	],
+}, {
+	name: 'Miscellaneous',
+	data: [
+		'UI/UX Design', 'SEO',
+	],
 }];

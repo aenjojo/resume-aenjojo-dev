@@ -3,7 +3,10 @@
 @tailwind utilities;
 
 :root {
-	@apply font-sans bg-base-100 scroll-smooth;
+	@apply font-sans scroll-smooth
+}
+body {
+	@apply bg-base-100 text-base-900 dark:bg-base-900 dark:text-base-100;
 
 	/* scrollbar firefox */
 	scrollbar-width: thin;
@@ -14,7 +17,7 @@
 	@apply w-2 h-2 lg:w-3 lg:h-3
 }
 ::-webkit-scrollbar-track {
-	@apply bg-base-200
+	@apply bg-base-200 dark:bg-base-800
 }
 ::-webkit-scrollbar-thumb {
 	@apply bg-primary-300
@@ -27,7 +30,7 @@
 
 /* list */
 .main-content :is(ol, ul) {
-	@apply list-outside mb-2 marker:text-base-800
+	@apply list-outside mb-2 marker:text-base-600 dark:marker:text-base-400
 }
 .main-content ol {
 	@apply list-decimal
@@ -50,6 +53,7 @@
 	@apply
 		px-1 py-0.5 font-mono rounded
 		bg-base-200 bg-opacity-30
+		dark:bg-base-800 dark:bg-opacity-30
 		
 		only:bg-transparent only:p-0
 }
@@ -57,6 +61,7 @@
 	@apply
 		my-4 p-4
 		bg-base-200 bg-opacity-30
+		dark:bg-base-800 dark:bg-opacity-30
 		overflow-x-auto
 }
 
@@ -65,6 +70,7 @@
 	@apply
 		my-4 py-2 pr-2 pl-12 relative
 		bg-base-200 bg-opacity-30 rounded-lg
+		dark:bg-base-800 dark:bg-opacity-30
 		before:content-['"'] before:text-6xl before:absolute before:left-2 before:top-4
 }
 
@@ -79,9 +85,12 @@
 	@apply
 		odd:bg-base-200 odd:bg-opacity-30
 		even:bg-base-300 even:bg-opacity-30
+
+		dark:odd:bg-base-800 dark:odd:bg-opacity-30
+		dark:even:bg-base-700 dark:even:bg-opacity-30
 }
 .main-content th {
-	@apply text-center bg-primary-400 text-base-100 px-4
+	@apply text-center bg-primary-400 dark:bg-primary-300 text-base-100 px-4
 }
 .main-content td {
 	@apply px-4

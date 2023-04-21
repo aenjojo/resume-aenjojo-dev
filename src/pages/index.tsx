@@ -33,20 +33,20 @@ export default function HomePage({ latestProjects, latestPosts }: HomePropsType)
 			/>
 			<Header />
 			<main>
-				<section className='py-10 bg-gradient-to-br from-primary-300 to-secondary-300 h-screen relative top-0'>
+				<section className='py-10 bg-gradient-to-br from-primary-300 to-secondary-300 dark:from-primary-800 dark:to-secondary-800 h-screen relative top-0'>
 					<section className='container mx-auto px-4 lg:px-20 xl:px-40 lg:py-16 flex flex-col lg:flex-row gap-10 h-auto items-center'>
-						<div className='w-full lg:w-1/2 p-10 bg-base-100 bg-opacity-60 backdrop-blur-lg rounded-lg'>
+						<div className='w-full lg:w-1/2 p-10 bg-base-100 dark:bg-base-900 bg-opacity-60 dark:bg-opacity-60 backdrop-blur-lg rounded-lg'>
 							<DisplayText
 								value='Hi, there!'
 								size='M'
-								className='uppercase tracking-widest text-secondary-500 font-bold'
+								className='uppercase tracking-widest text-secondary-500 dark:text-secondary-400 font-bold'
 							/>
 							<DisplayText
 								value='I am Josua Fernando Simanjuntak'
 								size='XXL'
-								className='text-primary-500'
+								className='text-primary-500 dark:text-primary-400'
 							/>
-							<p className='lg:text-lg text-base-700'>
+							<p className='lg:text-lg text-base-700 dark:text-base-300'>
 								I am a front-end software engineer.
 								I mainly focused in web development with React JS, Next JS, and Tailwind CSS.
 							</p>

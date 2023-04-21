@@ -9,7 +9,7 @@ export function TimelineContainer({ children }: TimelineContainerPropsType) {
 		<section
 			className='flex flex-row gap-5 my-4 ml-6 mr-4 py-2'
 		>
-			<div className='h-auto w-2 mr-3.5 bg-primary-100 border-x-2 border-x-primary-300 flex-shrink'></div>
+			<div className='h-auto w-2 mr-3.5 bg-primary-100 dark:bg-primary-900 border-x-2 border-x-primary-300 dark:border-x-primary-400 flex-shrink'></div>
 			<section className='flex flex-col flex-grow'>
 				{children}
 			</section>

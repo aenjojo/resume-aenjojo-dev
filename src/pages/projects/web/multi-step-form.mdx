@@ -1,0 +1,67 @@
+import { ProjectLayout } from '#layouts/ProjectLayout';
+
+export const meta = {
+	title: 'Multi Step Form',
+	description: 'A multi-step subscription form built with react, redux-toolkit, and sass',
+	fullDate: '23 June 2023',
+	date: '2023-06-23',
+	image: '/images/projects/multi-step-form.png',
+	techStack: ['react', 'ts', 'redux', 'sass', 'vite', 'netlify'],
+	keywords: ['multi step form', 'react', 'redux', 'redux-toolkit', 'sass'],
+	codeUrl: 'https://gitlab.com/aenjojo/multi-step-form',
+	demoUrl: 'https://aenjojo-multi-step-form.netlify.app/',
+};
+
+# Introduction
+This is a multi-step form I created to accomplish the challenge on [Frontend Mentor](https://frontendmentor.io).
+I choose to do this challenge because I found that this project can be used to train my skill in React,
+Redux with Redux-Toolkit (RTK), and Sass.
+
+# The Challenge
+The task is to create a web project and convert the given design to code (commonly known as slicing).
+The UI result also must closely similar to the given design. I can accomplish it with my own way
+and use the tech stacks I want, as long as I follow the given challenge.
+
+The challenge given is to make a multi-step form with the following functionality:
+* Complete each step of the sequence
+* Go back to a previous step to update their selections
+* See a summary of their selections on the final step and confirm their order
+* View the optimal layout for the interface depending on their device's screen size
+* See hover and focus states for all interactive elements on the page
+* Receive form validation messages if:
+	* A field has been missed
+	* The email address is not formatted correctly
+	* A step is submitted, but no selection has been made
+
+# The Consideration to Choose the Tech Stacks.
+Before I decided to solve a challenge on Frontend Mentor, I was thinking to learn some technologies that I previously saw
+on many jobs requirements posted in LinkedIn. Most of them are requiring a candidate to have a knowledge in Redux and Sass.
+So, I looking for a project that I can solve with those technology and then found this challenge.
+
+Actually, I want to use plain redux, since many company use it. But, as I read the official Redux documentation,
+they stated that it is better to use Redux-Toolkit (RTK) to prevent many bugs that peoples might encounter
+because of wrong configuration. RTK also use Redux under the hood, so it still counted as learning Redux.
+An option that I would like to use to replace Redux for global state-management is Zustand. It is so easy to use,
+according to what I see in their documentation. But, it still new and only few implementation in the projects out there.
+
+I chose Sass not only because I need it for my skills, but also because it support plain css. I need that to make the
+design slicing easier and faster, although I need to setup some configuration first. Sass also supported by Vite by default.
+
+During the development, I am thinking to use GitHub for the git repository, but decided to use GitLab because I want to make
+myself familiar with GitLab (in case there is a job require it).
+
+export default ({ children }) => (
+	<ProjectLayout
+		metadata={{
+			title: meta.title,
+			description: meta.description,
+			keywords: meta.keywords,
+			image: meta.image,
+			techStack: meta.techStack,
+			codeUrl: meta.codeUrl,
+			demoUrl: meta.demoUrl,
+		}}
+	>
+		{children}
+	</ProjectLayout>
+);

@@ -8,14 +8,17 @@ import {
 	SiReact,
 	SiNextdotjs,
 	SiSvelte,
-	SiTailwindcss,
 	SiDiscord,
+	SiRedux,
+	SiTailwindcss,
+	SiSass,
 	SiVite,
 	SiRollupdotjs,
 	SiPostcss,
 	SiStorybook,
 	SiJest,
 	SiVercel,
+	SiNetlify,
 	SiGithubpages,
 } from 'react-icons/si';
 
@@ -74,13 +77,25 @@ export const techIcons: techIconsType[] = [
 		name: 'Svelte Kit',
 		icon: <SiSvelte size='24' title='Svelte kit' fill='#ff3e00' />,
 	}, {
+		id: 'discordjs',
+		name: 'Discord JS',
+		icon: <SiDiscord size='24' title='Discord.js' fill='#5865f2' />,
+	}, {
+		id: 'redux',
+		name: 'Redux',
+		icon: <SiRedux size='24' title='Redux' fill='#764ABC' />,
+	},
+	/**
+	 * styling
+	 */
+	{
 		id: 'tailwind',
 		name: 'Tailwind CSS',
 		icon: <SiTailwindcss size='24' title='Tailwind CSS' fill='#06b6d4' />,
 	}, {
-		id: 'discordjs',
-		name: 'Discord JS',
-		icon: <SiDiscord size='24' title='Discord.js' fill='#5865f2' />,
+		id: 'sass',
+		name: 'Sass/Scss',
+		icon: <SiSass size='24' title='Sass' fill='#CC6699' />,
 	},
 	/**
 	 * environments
@@ -113,7 +128,11 @@ export const techIcons: techIconsType[] = [
 		id: 'vercel',
 		name: 'Vercel',
 		icon: <SiVercel size='24' title='Vercel' fill='#000000'/>,
-	},  {
+	}, {
+		id: 'netlify',
+		name: 'Netlify',
+		icon: <SiNetlify size='24' title='Netlify' fill='#00C7B7'/>,
+	}, {
 		id: 'ghpages',
 		name: 'Github Pages',
 		icon: <SiGithubpages size='24' title='Github Pages' fill='#222222'/>,

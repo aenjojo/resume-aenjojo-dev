@@ -9,6 +9,7 @@ import { getProjects, type metaDataType as projectMeta } from '#libs/projects';
 import { getPosts, type metaDataType as postMeta } from '#libs/posts';
 import { sortContent } from '#libs/sortContent';
 import ShowcaseImage from '#public/images/showcase.png';
+import AJSticker from '#public/images/aenjojo-v3-blupinkeu-sticker.png';
 import { TopButton } from '#components/Button';
 
 interface HomePropsType {
@@ -25,6 +26,22 @@ interface HomePropsType {
 export default function HomePage({ latestProjects, latestPosts }: HomePropsType) {
 	return (
 		<>
+			<div className='w-screen h-screen fixed top-0 left-0 z-50 flex justify-center items-center bg-gradient-to-br from-blue-500 to-pink-500'>
+				<div className='flex flex-col items-center gap-16'>
+					<Image
+						alt=''
+						src={AJSticker}
+						className='animate-ping w-1/6'
+					/>
+					<div className='text-center text-white'>
+						<p>Aaa... Yossha ikuzo!</p>
+						<p>Tiger! Fire! Cyber! Fiber! Diver! Viber! Jya-Jya!</p>
+						<p>Tora! Hi! Jinzou! Seni! Ama! Shindou! Kasen Tobi Jyokyo!</p>
+						<p>Chape! Ape! Kara! Kina! Rara! Tosuke! Myoohontosuke!</p>
+						<p>Fiony! Fiony! Chouzetsu Kawaii! Fiony!</p>
+					</div>
+				</div>
+			</div>
 			<SEO
 				title={'Home'}
 				description={'Josua Fernando\'s personal website is a page that used to list all of his works and portfolios'}

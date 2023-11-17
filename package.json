@@ -23,7 +23,7 @@
     "react-icons": "4.8.0",
     "react-web-share": "2.0.2",
     "remark-gfm": "3.0.1",
-    "sharp": "0.32.0"
+    "sharp": "0.32.6"
   },
   "devDependencies": {
     "@tailwindcss/line-clamp": "0.4.2",

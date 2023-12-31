@@ -15,7 +15,7 @@ export function Footer() {
 						className='w-28 stroke-primary-500'
 					/>
 					<DisplayText
-						value='aenjojo © 2023'
+						value='aenjojo © 2024'
 						size='S'
 						className='text-center'
 					/>

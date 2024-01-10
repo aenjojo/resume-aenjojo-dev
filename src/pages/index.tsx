@@ -135,6 +135,7 @@ export default function HomePage({ latestProjects, latestPosts }: HomePropsType)
 				<TopButton />
 			</main>
 			<Footer />
+			{/*
 			<div className='w-screen h-screen fixed top-0 left-0 z-50 flex justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500'>
 				<div className='flex flex-col items-center gap-16'>
 					<Image
@@ -147,6 +148,7 @@ export default function HomePage({ latestProjects, latestPosts }: HomePropsType)
 					</div>
 				</div>
 			</div>
+   			*/}
 		</>
 	);
 }

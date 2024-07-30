@@ -23,30 +23,6 @@ interface HomePropsType {
 	}[],
 }
 
-const chantYosshaIkuzo = (
-	<>
-		<p>Aaa... Yossha ikuzo!</p>
-		<p>Tiger! Fire! Cyber! Fiber! Diver! Viber! Jya-Jya!</p>
-		<p>Tora! Hi! Jinzou! Seni! Ama! Shindou! Kasen Tobi Jyokyo!</p>
-		<p>Chape! Ape! Kara! Kina! Rara! Tosuke! Myoohontosuke!</p>
-		<p>Fiony! Fiony! Chouzetsu Kawaii! Fiony!</p>
-	</>
-);
-
-const chantGachiKoiKojo = (
-	<>
-		<p>Iitai koto ga arundayo</p>
-		<p>Yappari Fiony ga kawaiiyo</p>
-		<p>Sukisuki daisuki yappari suki</p>
-		<p>Yatto mitsuketa ohimesama</p>
-		<p>Ore ga umaretekita riyuu</p>
-		<p>Sore wa Fiony ni deautame</p>
-		<p>Ore to isshoni jinsei ayumou</p>
-		<p>Sekaide ichiban aishiteru</p>
-		<p>AISHITERU!!!</p>
-	</>
-);
-
 export default function HomePage({ latestProjects, latestPosts }: HomePropsType) {
 	return (
 		<>
@@ -135,20 +111,6 @@ export default function HomePage({ latestProjects, latestPosts }: HomePropsType)
 				<TopButton />
 			</main>
 			<Footer />
-			{/*
-			<div className='w-screen h-screen fixed top-0 left-0 z-50 flex justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500'>
-				<div className='flex flex-col items-center gap-16'>
-					<Image
-						alt=''
-						src={AJSticker}
-						className='animate-ping w-1/6'
-					/>
-					<div className='text-center text-white text-xs md:text-base'>
-						{Math.floor(Math.random() * 10) < 5 ? chantYosshaIkuzo : chantGachiKoiKojo}
-					</div>
-				</div>
-			</div>
-   			*/}
 		</>
 	);
 }

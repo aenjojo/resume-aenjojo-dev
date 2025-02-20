@@ -1,0 +1,43 @@
+import { BlogLayout } from '#layouts/BlogLayout';
+
+export const meta = {
+	title: 'Why I Choose to Use Next.js Over Plain React',
+	excerpt: '',
+	fullDate: '20 March 2023',
+	date: '2023-03-20',
+	keywords: ['next.js', 'react'],
+	image: '',
+	tags: ['next.js', 'react'],
+};
+
+# Table of Contents
+* [Introduction](#introduction)
+* [Why](#why)
+* [React Docs Statement](#react-docs-statement)
+
+# Introduction
+No Idea
+
+# Why
+Next.js provides a simple way to develop a website with rich built-in features, such as SSR, file-based routing, and API.
+
+# React Docs Statement
+New react docs also have stated that if you are going to create a website fully with react, it is better to use framework
+like Next.js.
+
+Unlike many frontend framework like Vue, Angular, and Svelte, React is a library which means it needs some packages and configurations to build a website.
+
+export default ({ children }) => (
+	<BlogLayout
+		metadata={{
+			title: meta.title,
+			description: meta.excerpt,
+			keywords: meta.keywords,
+			date: meta.fullDate,
+			image: meta.image,
+			tags: meta.tags,
+		}}
+	>
+		{children}
+	</BlogLayout>
+);

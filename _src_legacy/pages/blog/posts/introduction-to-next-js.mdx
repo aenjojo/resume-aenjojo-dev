@@ -1,0 +1,40 @@
+import { BlogLayout } from '#layouts/BlogLayout';
+
+export const meta = {
+	title: 'Introduction to Next.js',
+	excerpt: 'Here, I was creating my own MDX based blog, which is a cool way to create blog post...',
+	fullDate: '8 December 2022',
+	date: '2022-12-08',
+	keywords: [''],
+	tags: ['html', 'mdx', 'react.js'],
+};
+
+# What is Next.js
+Next.js is a framework for React built and developed by Vercel since 2017. Next.js was built to optimize
+Search Engine Optimization (SEO) of a website by rendering the page at server (SSR) or at build time (SSG).
+SSR or Server-side Rendering is a method to name the process of compiling the `JSX` file into plain HTML on the server
+when requested by the user, so user's browser will not download the React.js compiler and compile it on the browser.
+SSG or Static Site Generation itself is similar to SSR, but their difference is when to render a page.
+SSG renders only once during build time, while SSR renders on every request to the page.
+
+# Why to use Next.js
+Next.js offers many features to help developer build a react website faster, easier, and fully optimized.
+Their key features are static fonts, optimized image, page-based routing, and many more.
+Currently, Vercel team are building Turbopack, a continue of Webpack, to provide a very fast bundler
+and will be adopted to Next.js itself. The page will be ready in few seconds
+(according to the benchmark in the Turbopack website)
+
+export default ({ children }) => (
+	<BlogLayout
+		metadata={{
+			title: meta.title,
+			description: meta.excerpt,
+			keywords: meta.keywords,
+			date: meta.fullDate,
+			image: meta.image,
+			tags: meta.tags,
+		}}
+	>
+		{children}
+	</BlogLayout>
+);

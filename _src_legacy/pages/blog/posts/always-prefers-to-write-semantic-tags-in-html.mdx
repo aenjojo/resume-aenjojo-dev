@@ -1,0 +1,29 @@
+import { BlogLayout } from '#layouts/BlogLayout';
+
+export const meta = {
+	title: 'Always Prefers to Write Semantic Tags in HTML',
+	excerpt: '',
+	fullDate: '20 March 2023',
+	date: '2023-03-20',
+	keywords: ['html', 'accessibility'],
+	image: '',
+	tags: ['html'],
+};
+
+# Introduction
+Lola
+
+export default ({ children }) => (
+	<BlogLayout
+		metadata={{
+			title: meta.title,
+			description: meta.excerpt,
+			keywords: meta.keywords,
+			date: meta.fullDate,
+			image: meta.image,
+			tags: meta.tags,
+		}}
+	>
+		{children}
+	</BlogLayout>
+);

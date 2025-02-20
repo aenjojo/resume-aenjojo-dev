@@ -1,0 +1,134 @@
+import { DisplayText } from '#components/Text';
+import { BlogLayout } from '#layouts/BlogLayout';
+import { getSinglePost } from '#libs/posts';
+
+export const meta = {
+	title: 'Just a Test Page',
+	excerpt: 'Hello',
+	fullDate: '6 December 2022',
+	date: '2022-12-06',
+	keywords: ['html', 'css'],
+	tags: ['html', 'css'],
+	image: '/images/girl-g5b80ab43c_1920.jpg',
+};
+
+# Heading L-1: Main Title
+
+## Heading L-2: Section Title
+
+### Heading L-3: Category Title
+
+#### Heading L-4: Sub Category Title 1
+
+Paragraph normally with [lol](#heading-l-4%3A-sub-category-title-2)
+
+Paragraph with _emphasis_, **strong**, ~~deleted~~, and `code`
+
+Paragraph with [link](http://localhost:3000) Block Quote Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+Accusantium quos cumque labore iure assumenda, aut necessitatibus placeat eum? Voluptatibus placeat ratione doloremque.
+Totam aut perspiciatis asperiores labore ipsam voluptatibus culpa!
+
+![image](/images/ballerina-g835318b23_1920.jpg)
+
+> Block Quote Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium quos cumque labore iure assumenda, aut necessitatibus placeat eum? Voluptatibus placeat ratione doloremque. Totam aut perspiciatis asperiores labore ipsam voluptatibus culpa!
+>> Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+>> Accusantium quos cumque labore iure assumenda, aut necessitatibus placeat eum?
+>> Voluptatibus placeat ratione doloremque.
+> Totam aut perspiciatis asperiores labore ipsam voluptatibus culpa!
+
+{2 * Math.PI}
+
+#### Heading L-4: Sub Category Title 2
+
+```js
+Pre: Whereas recognition of the inherent dignity Pre: Whereas recognition of the inherent dignity
+Post: The quick brown fox jumps over the lazy dog
+
+const a = 'ss';
+
+console.log(a);
+```
+
+| table | col 1 | col 2 | x | table | col 1 | col 2 | table | col 1 | col 2 | x | table | col 1 | col 2 |
+| ----- | :---: | ----: | --- | ----- | :---: | ----: | ----- | :---: | ----: | --- | ----- | :---: | ----: |
+| row 1 | lol | mak | c | row 1 | lol | mak | row 1 | lol | mak | c | row 1 | lol | mak |
+| row 2 | lol | maksmk | x | row 2 | lol | maksmk | row 2 | lol | maksmk | x | row 2 | lol | maksmk |
+| row 1 | lol | mak | c | row 1 | lol | mak | row 1 | lol | mak | c | row 1 | lol | mak |
+| row 2 | lol | maksmk | x | row 2 | lol | maksmk | row 2 | lol | maksmk | x | row 2 | lol | maksmk |
+| row 1 | lol | mak | c | row 1 | lol | mak | row 1 | lol | mak | c | row 1 | lol | mak |
+| row 2 | lol | maksmk | x | row 2 | lol | maksmk | row 2 | lol | maksmk | x | row 2 | lol | maksmk |
+| row 1 | lol | mak | c | row 1 | lol | mak | row 1 | lol | mak | c | row 1 | lol | mak |
+| row 2 | lol | maksmk | x | row 2 | lol | maksmk | row 2 | lol | maksmk | x | row 2 | lol | maksmk |
+| row 1 | lol | mak | c | row 1 | lol | mak | row 1 | lol | mak | c | row 1 | lol | mak |
+| row 2 | lol | maksmk | x | row 2 | lol | maksmk | row 2 | lol | maksmk | x | row 2 | lol | maksmk |
+
+| table | col 1 | col 2 |
+| ----- | :---: | ----: |
+| row 1 | lol | mak |
+| row 1 | lol | mak |
+| row 1 | lol | mak |
+
+- [ ] checkbox
+- [x] checked checkbox
+
+* list
+* list
+* list
+  * list
+  * list
+
+1. lisa
+2. lise
+   1. lis22
+   2. s
+      1. sit
+	  2. ss
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste eaque illum id magni ipsum nobis nemo pariatur in, doloribus veritatis quo, esse modi molestiae ipsam. Voluptatibus eligendi rem illum tempora.
+Omnis repellat natus delectus ab totam cumque at facere alias eveniet. Alias, cum, vel dolorum quam, eius cupiditate soluta perspiciatis ea asperiores dignissimos eaque. Aut ipsam quos est? Debitis, minus?
+Quasi libero porro tenetur dolorum excepturi commodi consectetur itaque officia, eaque molestiae autem error aperiam expedita ipsum quas placeat impedit voluptas aut sequi praesentium earum? Fugiat ducimus expedita incidunt quos.
+Sed rerum accusamus, dolore quidem id ipsam obcaecati, tempora sequi, soluta quaerat sint velit fugit at aut laborum. Ducimus in natus autem officiis sed deserunt at dicta cum nulla placeat!
+Inventore mollitia excepturi amet, possimus corporis laborum! Iusto consectetur omnis fugit? Nesciunt, ipsam aspernatur corporis dolore quos deserunt ea saepe doloremque temporibus quis hic, itaque natus amet! Vero, alias quasi.
+Iste fugiat labore optio ullam doloremque eius exercitationem molestiae quam quas blanditiis veniam, voluptates vero vitae repellendus nisi molestias atque fuga facilis harum tenetur unde. Accusantium voluptatibus tempora ea id?
+Dolores culpa perferendis officia libero fuga magnam iste necessitatibus quae non. In cupiditate deleniti deserunt, facilis pariatur iusto repudiandae, officiis provident fugiat voluptatibus unde eaque impedit sunt ex? Tempore, id.
+Laboriosam accusantium eveniet impedit doloribus repudiandae, reprehenderit quam ex obcaecati blanditiis quidem ab placeat quod, quis qui et voluptatum deleniti voluptate saepe quo, iusto aspernatur. Possimus tempora accusamus eligendi reprehenderit!
+Beatae odit odio debitis sunt impedit obcaecati, autem tenetur optio eligendi et nisi neque consequuntur voluptate, hic doloribus ullam! Sunt, doloribus. Consectetur, rem architecto. Doloremque voluptatem officiis voluptatum atque ipsum.
+Animi qui nemo itaque dolorem dolore dignissimos pariatur repellendus sunt. Odit, nostrum adipisci quos saepe nihil exercitationem voluptates tempore aperiam dolores error nisi minus dolorum! Quibusdam, reprehenderit incidunt. Commodi, repellat!
+Maxime quia dicta minima quaerat veniam veritatis ex architecto rerum harum totam, ipsa cumque eum incidunt dolorum perferendis accusantium consequuntur necessitatibus corrupti vel eligendi magnam! Error molestias omnis doloribus nesciunt!
+Rem error reprehenderit in, temporibus officiis maxime quas asperiores suscipit ut tenetur minima, eius placeat facilis inventore fuga odio itaque quasi amet iure non! Libero molestias dicta atque voluptas optio!
+Iusto quo id minima aliquid molestias itaque nihil vitae deserunt? Animi nostrum ducimus laudantium minus eum harum atque possimus suscipit perferendis vel debitis deleniti sunt quaerat, temporibus, excepturi id ab!
+Sit, consequatur doloribus eligendi ea beatae placeat obcaecati maxime animi earum inventore libero voluptas voluptatem harum illo? Facilis, quae cupiditate, autem repellendus mollitia ad reprehenderit voluptas incidunt culpa animi voluptates!
+Eligendi culpa quam nemo magni provident architecto dolorum, dolorem natus eveniet repudiandae beatae, iste praesentium commodi, hic fugiat adipisci accusantium vero cupiditate porro? Incidunt explicabo quam, nesciunt qui maiores praesentium.
+Ex laborum reiciendis ducimus! Hic, quae cum! Accusamus quibusdam sit ut tempora esse? Id similique neque impedit eos delectus fugiat, et doloremque sapiente autem consequatur iure necessitatibus maxime porro quae.
+Ab, ipsum tempora vel libero adipisci non harum officia dignissimos repellat provident quisquam nobis ipsam deserunt sunt optio labore modi alias. Laudantium, culpa quibusdam corporis autem aut ut architecto distinctio.
+Aut dignissimos eum quis iste quam, nulla possimus optio nisi officiis omnis neque veritatis necessitatibus facilis molestias? Repudiandae molestias voluptas, quibusdam odit beatae ducimus dignissimos nobis nihil explicabo! Dolores, vero.
+Commodi animi assumenda saepe repudiandae obcaecati dolorem! Corrupti temporibus dicta porro maxime dolor, nihil natus labore voluptatum autem doloremque, ipsam veritatis eligendi! Cupiditate pariatur aspernatur illum eaque ad architecto facere?
+Itaque ab nobis sit. Nulla harum similique nostrum iusto saepe accusamus at dolorem culpa, odit quam neque impedit qui labore beatae, veniam ratione blanditiis atque aperiam itaque? Nostrum, dolores consequatur?
+
+export async function getStaticProps() {
+	const post1 = await getSinglePost('my-mdx-page.mdx');
+	const post2 = await getSinglePost('just-a-test-page.mdx');
+	const post3 = await getSinglePost('introduction-to-next-js.mdx');
+	//
+	return {
+		props: {
+			postsData: [post1, post2, post3],
+		},
+	};
+}
+
+export default ({ children, postsData }) => (
+	<BlogLayout
+		metadata={{
+			title: meta.title,
+			description: meta.excerpt,
+			keywords: meta.keywords,
+			date: meta.fullDate,
+			image: meta.image,
+			tags: meta.tags,
+		}}
+		articles={postsData}
+	>
+		{children}
+	</BlogLayout>
+);

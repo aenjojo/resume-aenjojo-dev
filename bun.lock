@@ -3,6 +3,10 @@
   "workspaces": {
     "": {
       "name": "resume-aenjojo-dev",
+      "dependencies": {
+        "@fontsource-variable/spline-sans": "^5.1.1",
+        "@fontsource-variable/spline-sans-mono": "^5.1.1",
+      },
       "devDependencies": {
         "@biomejs/biome": "1.9.4",
         "@sveltejs/adapter-vercel": "^5.5.2",
@@ -87,6 +91,10 @@
     "@esbuild/win32-ia32": ["@esbuild/win32-ia32@0.24.2", "", { "os": "win32", "cpu": "ia32" }, "sha512-q+iGUwfs8tncmFC9pcnD5IvRHAzmbwQ3GPS5/ceCyHdjXubwQWI12MKWSNSMYLJMq23/IUCvJMS76PDqXe1fxA=="],
 
     "@esbuild/win32-x64": ["@esbuild/win32-x64@0.24.2", "", { "os": "win32", "cpu": "x64" }, "sha512-7VTgWzgMGvup6aSqDPLiW5zHaxYJGTO4OokMjIlrCtf+VpEL+cXKtCvg723iguPYI5oaUNdS+/V7OU2gvXVWEg=="],
+
+    "@fontsource-variable/spline-sans": ["@fontsource-variable/spline-sans@5.1.1", "", {}, "sha512-jkCpOJbhIigpDWfFa96DFlZKD5uKaZwof+zLb/k0h1fRBGc2/fxszsn6AHyb4Zuo13RDpxolhvRWkpzcxrq7iQ=="],
+
+    "@fontsource-variable/spline-sans-mono": ["@fontsource-variable/spline-sans-mono@5.1.1", "", {}, "sha512-xTH/yC0/zsmifKJ37hyZHWr6Mr0DnXSnRofSv4HO4ir26lSK9FS4dv+G1YnfEAjh7lS7kO318nMBUDjtcFUFlQ=="],
 
     "@isaacs/cliui": ["@isaacs/cliui@8.0.2", "", { "dependencies": { "string-width": "^5.1.2", "string-width-cjs": "npm:string-width@^4.2.0", "strip-ansi": "^7.0.1", "strip-ansi-cjs": "npm:strip-ansi@^6.0.1", "wrap-ansi": "^8.1.0", "wrap-ansi-cjs": "npm:wrap-ansi@^7.0.0" } }, "sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA=="],
 
